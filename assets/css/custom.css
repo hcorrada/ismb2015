@@ -10,3 +10,13 @@
 .title-slide hgroup > h2{
     color: #317eac;
 }
+
+article p, article li, article li.build, section p, section li{
+    font-family: jaf-bernino-sans, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
+    color: #555555;
+}
+
+slide:not(.segue) h2{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #317eac;
+}
