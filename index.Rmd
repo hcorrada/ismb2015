@@ -300,6 +300,8 @@ mgr <- startStandalone(geneInfo=Mus.musculus, geneInfoName="mm10",
 Nature Methods on Monday!  
 Follow us (brand new): @epiviz  
 
+These slides available: http://epiviz.github.io/bioc2014
+
 ---
 
 ## Acknowledgements
@@ -310,6 +312,7 @@ Florin Chelaru, UMD
 - CBCB@UMD: my group
 - JHU/Harvard: Kasper Hansen, Winston Timp, Rafael Irizarry, Andy Feinberg
 - Genentech: Michael Lawrence
+- Rstudio: Joe Cheng, et al.
 - Funding: NIH, Genentech
 
 
