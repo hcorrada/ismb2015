@@ -1,0 +1,12 @@
+.title-slide {
+    background-color: #fff
+}
+
+.title-slide hgroup > h1{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.title-slide hgroup > h1,
+.title-slide hgroup > h2{
+    color: #317eac;
+}
