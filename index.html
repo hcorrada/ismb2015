@@ -205,8 +205,292 @@
 <p><strong>I want to use a genome browser track as a display device in R!!</strong></p>
 </blockquote>
 
-<p><a href="http://epiviz.cbcb.umd.edu">http://epiviz.cbcb.umd.edu</a>
-<footer class="source">[Nat. methods, <em>in press</em>]</footer></p>
+<p>e.g.: <a href="http://epiviz.cbcb.umd.edu/?ws=45KBV4C7z3u">http://epiviz.cbcb.umd.edu/?ws=45KBV4C7z3u</a>
+<footer class="source">[Nat. Methods, <em>in press</em>]</footer></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <article data-timings="">
+    <iframe data-src="http://epiviz.cbcb.umd.edu/?ws=W3ieGz19icm" width="99%"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Communication with R/Bioc</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Using the <code>epivizr</code> package</p>
+
+<ul>
+<li>Setup up an <code>epivizr</code> session</li>
+</ul>
+
+<pre><code class="r">library(epivizr)
+data(tcga_colon_example)
+mgr &lt;- startEpiviz(workspace=&quot;qyOTB6vVnff&quot;)
+</code></pre>
+
+<ul>
+<li>Add a device with <code>GRanges</code> data</li>
+</ul>
+
+<pre><code class="r">blocks_dev &lt;- mgr$addDevice(colon_blocks, &quot;450k blocks&quot;)
+</code></pre>
+
+<ul>
+<li>Subset ranges by width</li>
+</ul>
+
+<pre><code class="r">keep &lt;- width(colon_blocks) &gt; 250000
+mgr$updateDevice(blocks_dev, colon_blocks[keep,])
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Communication with R/Bioc</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Using the <code>epivizr</code> package: browse by regions of interest.</p>
+
+<ul>
+<li>What&#39;s around the widest blocks?</li>
+</ul>
+
+<pre><code class="r">o &lt;- order(-width(colon_blocks))
+slideShowRegions &lt;- colon_blocks[o[1:10],]
+slideShowRegions &lt;- slideShowRegions + 1e5
+mgr$slideshow(slideShowRegions)
+</code></pre>
+
+<ul>
+<li>Close session</li>
+</ul>
+
+<pre><code class="r">mgr$stopServer()
+</code></pre>
+
+<ul>
+<li>More info in the <code>epivizr</code> vignette:</li>
+</ul>
+
+<pre><code class="r">browseVignettes(&quot;epivizr&quot;)
+</code></pre>
+
+<blockquote>
+<p><code>epivizr</code> uses WebSockets for connection, same as <code>shiny</code>. Big, big, big
+thanks to the @rstudio folks for working on this infrastructure.</p>
+</blockquote>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Plugins, plugins, plugins</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This is how we integrate different data types and add new visualizations.</p>
+
+<p>see: <a href="https://gist.github.com/11017650">https://gist.github.com/11017650</a></p>
+
+<pre><code class="javascript">epiviz.plugins.charts.MyTrack.prototype.draw = function(range, data, slide, zoom) {
+  epiviz.ui.charts.Track.prototype.draw.call(this, range, data, slide, zoom);
+
+  // If data is defined, then the base class sets this._lastData to data.
+  // If it isn&#39;t, then we&#39;ll use the data from the last draw call.
+  // Same with this._lastRange and range.
+  data = this._lastData;
+  range = this._lastRange;
+
+  // If data is not defined, there is nothing to draw
+  if (!data || !range) { return []; }
+
+  // Using D3, compute a function that maps base-pair locations to chart pixel coordinates
+  var xScale = d3.scale.linear()
+    .domain([range.start(), range.end()])
+    .range([0, this.width() - this.margins().left() - this.margins().right()]);
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <article data-timings="">
+    <p><a href="http://epiviz.cbcb.umd.edu/?gist%5B%5D=11017650&amp;ws=Y8kWxCO2Ajn">http://epiviz.cbcb.umd.edu/?gist[]=11017650&amp;ws=Y8kWxCO2Ajn</a></p>
+
+<iframe data-src="http://epiviz.cbcb.umd.edu/?gist[]=11017650&ws=Y8kWxCO2Ajn"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Plugins, plugins, plugins</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>see: <a href="https://gist.github.com/c41a2df3671395d8e4ad">https://gist.github.com/c41a2df3671395d8e4ad</a></p>
+
+<pre><code class="javascript">goog.provide(&#39;epiviz.plugins.data.UCSCDataProvider&#39;);
+
+epiviz.plugins.data.UCSCDataProvider = function (id, endpoint) {
+  epiviz.data.DataProvider.call(this, id || epiviz.plugins.data.UCSCDataProvider.DEFAULT_ID);
+
+  this._endpoint = endpoint;
+
+  this._refGene = new epiviz.measurements.Measurement(
+    &#39;refGene&#39;, // The column in the data source table that contains the values for this feature measurement
+    &#39;refGene&#39;, // A name not containing any special characters (only alphanumeric and underscores)
+    epiviz.measurements.Measurement.Type.RANGE,
+    &#39;refGene&#39;, // Data source: the table/data frame containing the data
+    &#39;ucsc_refGene&#39;, // An identifier for use to group with other measurements from different data providers
+    // that have the same seqName, start and end values
+    this.id(), // Data provider
+    null, // Formula: always null for measurements coming directly from the data provider
+    &#39;any&#39;, // Default chart type filter
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <article data-timings="">
+    <p><a href="http://epiviz.cbcb.umd.edu/?ws=cX1PgToUQs&amp;seqName=chr11&amp;start=59463945&amp;end=60638081&amp;gist%5B%5D=c41a2df3671395d8e4ad&amp;settings=default&amp;">http://epiviz.cbcb.umd.edu/?ws=cX1PgToUQs&amp;seqName=chr11&amp;start=59463945&amp;end=60638081&amp;gist[]=c41a2df3671395d8e4ad&amp;settings=default&amp;</a></p>
+
+<iframe data-src="http://epiviz.cbcb.umd.edu/?ws=cX1PgToUQs&seqName=chr11&start=59463945&end=60638081&gist[]=c41a2df3671395d8e4ad&settings=default&"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Plugins, plugins, plugins</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe data-src="http://epiviz.github.io"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h1>Datatypes</h1>
+  </hgroup>
+  <article data-timings="">
+    <div class="centered">
+<img src="images/datatypes.png" style="max-width=50%; min-width=50%"/>
+</div>
+
+<ul>
+<li>Based on &quot;three-table&quot; design</li>
+<li>Scripts can define coordinate space</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <article data-timings="">
+    <p><a href="http://epiviz.cbcb.umd.edu/?ws=SRHZlWRRAPd&amp;gist%5B%5D=a82a998817564ce3fe48&amp;settings=default&amp;">http://epiviz.cbcb.umd.edu/?ws=SRHZlWRRAPd&amp;gist[]=a82a998817564ce3fe48&amp;settings=default&amp;</a></p>
+
+<iframe data-src="http://epiviz.cbcb.umd.edu/?ws=SRHZlWRRAPd&gist[]=a82a998817564ce3fe48&settings=default&"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>Project status</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>Pretty solid <code>javascript</code> app source: <a href="http://github.com/epiviz/epiviz">http://github.com/epiviz/epiviz</a></li>
+<li>Documentation site: <a href="http://epiviz.github.io">http://epiviz.github.io</a></li>
+<li>Data hosted at UMD servers, about to ramp up what&#39;s available</li>
+<li>Code used for data server also available: <a href="http://github.com/epiviz/epiviz-data">http://github.com/epiviz/epiviz-data</a></li>
+<li><code>epivizr</code> in <code>Bioconductor</code> since summer 2013</li>
+<li>There was a major, major rewrite earlier this year</li>
+<li>Publication in Nature Methods out on Monday</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>What&#39;s coming very soon</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Standalone version (no internet required, javascript code provided in <code>epivizr</code>)</li>
+<li>Browse your favorite genome:</li>
+</ul>
+
+<pre><code class="r">library(epivizr)
+library(Mus.musculus)
+
+mgr &lt;- startStandalone(geneInfo=Mus.musculus, geneInfoName=&quot;mm10&quot;,
+                          keepSeqlevels=paste0(&quot;chr&quot;,c(1:19,&quot;X&quot;,&quot;Y&quot;)))
+</code></pre>
+
+<ul>
+<li>Support for <code>BigWigFile</code>, <code>BamFile</code> through <code>epivizr</code> (initially targeted to RNA-seq workflows)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Check it out:</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><a href="http://epiviz.github.io">http://epiviz.github.io</a></li>
+<li><a href="http://epiviz.cbcb.umd.edu">http://epiviz.cbcb.umd.edu</a></li>
+<li><a href="http://github.com/epiviz">http://github.com/epiviz</a></li>
+</ul>
+
+<p>Nature Methods on Monday!<br>
+Follow us (brand new): @epiviz  </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>Acknowledgements</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="http://www.cs.umd.edu/~florinc/images/me.png"/>
+Florin Chelaru, UMD</p>
+
+<ul>
+<li>CBCB@UMD: my group</li>
+<li>JHU/Harvard: Kasper Hansen, Winston Timp, Rafael Irizarry, Andy Feinberg</li>
+<li>Genentech: Michael Lawrence</li>
+<li>Funding: NIH, Genentech</li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -262,6 +546,90 @@
       <a href="#" target="_self" rel='tooltip' 
         data-slide=8 title=''>
          8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title=''>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Communication with R/Bioc'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Communication with R/Bioc'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Plugins, plugins, plugins'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title=''>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Plugins, plugins, plugins'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title=''>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Plugins, plugins, plugins'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Datatypes'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title=''>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='Project status'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='What&#39;s coming very soon'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='Check it out:'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='Acknowledgements'>
+         22
       </a>
     </li>
   </ul>
