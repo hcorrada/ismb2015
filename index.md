@@ -1,6 +1,6 @@
 ---
 title       :  Interactive and exploratory visualization of epigenome-wide data
-subtitle    : The Epiviz(r) project
+subtitle    : JSM2014, August 3, 2014
 author      : Hector Corrada Bravo
 job         : Center for Bioinformatics and Computational Biology, University of Maryland
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -292,7 +292,9 @@ One interpretation of *Big Data* is *Many relevant sources of contextual data*
 
 We are building a software system to support creative exploratory analysis of genome-wide datasets...
 
-<iframe data-src="http://bulletin.imstat.org/2014/05/terrence's-stuff-creativity-in-statistics/"></iframe>
+<div class="centered">
+<img src="images/terry.png" style="max-height: 60%; max-width: 60%"/>
+<footer class="source">[T. Speed]</footer>
 
 ---
 
@@ -310,11 +312,11 @@ We are building a software system to support creative exploratory analysis of ge
 
 ## Visualization goals
 
-- Context 
 - Data
-  - *Select and filter*: tight-knit integration with R/Bioconductor; (future) filters on visualization propagate to data environment
+  - *Select and filter*: tight-knit integration with R/Bioconductor; 
+  - (future) filters on visualization propagate to data environment
 - Model
-    - New 'measurements' the result of modeling suggested by data context
+    - New 'measurements' the result of modeling; perhaps suggested by data context
 
 <footer class="source">[Perer & Shneiderman]</footer>
 
