@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Epiviz(r)</title>
+  <title>Interactive and exploratory visualization of epigenome-wide data</title>
   <meta charset="utf-8">
-  <meta name="description" content="Epiviz(r)">
+  <meta name="description" content="Interactive and exploratory visualization of epigenome-wide data">
   <meta name="author" content="Hector Corrada Bravo">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -34,8 +34,8 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>Epiviz(r)</h1>
-    <h2>Turning a genome browser into a display device</h2>
+    <h1>Interactive and exploratory visualization of epigenome-wide data</h1>
+    <h2>The Epiviz(r) project</h2>
     <p>Hector Corrada Bravo<br/>Center for Bioinformatics and Computational Biology, University of Maryland</p>
   </hgroup>
   <article></article>  
@@ -279,13 +279,6 @@ mgr$slideshow(slideShowRegions)
 <pre><code class="r">mgr$stopServer()
 </code></pre>
 
-<ul>
-<li>More info in the <code>epivizr</code> vignette:</li>
-</ul>
-
-<pre><code class="r">browseVignettes(&quot;epivizr&quot;)
-</code></pre>
-
 <blockquote>
 <p><code>epivizr</code> uses WebSockets for connection, same as <code>shiny</code>. Big, big, big
 thanks to the @rstudio folks for working on this infrastructure.</p>
@@ -417,26 +410,7 @@ epiviz.plugins.data.UCSCDataProvider = function (id, endpoint) {
 
 <slide class="" id="slide-19" style="background:;">
   <hgroup>
-    <h2>Project status</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul class = "build incremental">
-<li>Pretty solid <code>javascript</code> app source: <a href="http://github.com/epiviz/epiviz">http://github.com/epiviz/epiviz</a></li>
-<li>Documentation site: <a href="http://epiviz.github.io">http://epiviz.github.io</a></li>
-<li>Data hosted at UMD servers, about to ramp up what&#39;s available</li>
-<li>Code used for data server also available: <a href="http://github.com/epiviz/epiviz-data">http://github.com/epiviz/epiviz-data</a></li>
-<li><code>epivizr</code> in <code>Bioconductor</code> since summer 2013</li>
-<li>There was a major, major rewrite earlier this year</li>
-<li>Publication in Nature Methods out on Monday</li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-20" style="background:;">
-  <hgroup>
-    <h2>What&#39;s coming very soon</h2>
+    <h2>Build your own browser</h2>
   </hgroup>
   <article data-timings="">
     <ul>
@@ -451,8 +425,28 @@ mgr &lt;- startStandalone(geneInfo=Mus.musculus, geneInfoName=&quot;mm10&quot;,
                           keepSeqlevels=paste0(&quot;chr&quot;,c(1:19,&quot;X&quot;,&quot;Y&quot;)))
 </code></pre>
 
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>Analysis era</h2>
+  </hgroup>
+  <article data-timings="">
+    <div class="centered">
+<img src="images/hadley.png" style="max-height: 50%; max-width: 50%"/>
+<img src="images/hadley2.png" style="max-height: 30%; max-width: 30%"/>
+<footer class="source">[H. Wickham]</footer>
+</div>
+
+<p>One interpretation of <em>Big Data</em> is <em>Many relevant sources of contextual data</em></p>
+
 <ul>
-<li>Support for <code>BigWigFile</code>, <code>BamFile</code> through <code>epivizr</code> (initially targeted to RNA-seq workflows)</li>
+<li>Easily access/integrate <em>contextual</em> data</li>
+<li>Driven by exploratory analysis of <em>immediate</em> data</li>
+<li>Iterative process</li>
+<li>Visual and computational exploration go hand in hand</li>
 </ul>
 
   </article>
@@ -460,6 +454,66 @@ mgr &lt;- startStandalone(geneInfo=Mus.musculus, geneInfoName=&quot;mm10&quot;,
 </slide>
 
 <slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Creativity in exploration</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>We are building a software system to support creative exploratory analysis of genome-wide datasets...</p>
+
+<iframe data-src="http://bulletin.imstat.org/2014/05/terrence's-stuff-creativity-in-statistics/"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>Visualization goals</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Context 
+
+<ul>
+<li>Integrate and align multiple data sources; navigate; search</li>
+<li><em>Connect</em>: brushing</li>
+<li><em>Encode</em>: map visualization properties to data on the fly</li>
+<li><em>Reconfigure</em>: multiple views of the same data</li>
+</ul></li>
+</ul>
+
+<p><footer class="source">[Perer &amp; Shneiderman]</footer></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>Visualization goals</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Context </li>
+<li>Data
+
+<ul>
+<li><em>Select and filter</em>: tight-knit integration with R/Bioconductor; (future) filters on visualization propagate to data environment</li>
+</ul></li>
+<li>Model
+
+<ul>
+<li>New &#39;measurements&#39; the result of modeling suggested by data context</li>
+</ul></li>
+</ul>
+
+<p><footer class="source">[Perer &amp; Shneiderman]</footer></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-24" style="background:;">
   <hgroup>
     <h2>Check it out:</h2>
   </hgroup>
@@ -470,16 +524,16 @@ mgr &lt;- startStandalone(geneInfo=Mus.musculus, geneInfoName=&quot;mm10&quot;,
 <li><a href="http://github.com/epiviz">http://github.com/epiviz</a></li>
 </ul>
 
-<p>Nature Methods on Monday!<br>
+<p>Nature Methods as of 2 hours ago...<br>
 Follow us (brand new): @epiviz  </p>
 
-<p>These slides available: <a href="http://epiviz.github.io/bioc2014">http://epiviz.github.io/bioc2014</a></p>
+<p>These slides available: <a href="http://hcorrada.github.io/jsm2014">http://hcorrada.github.io/jsm2014</a></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-22" style="background:;">
+<slide class="" id="slide-25" style="background:;">
   <hgroup>
     <h2>Acknowledgements</h2>
   </hgroup>
@@ -488,7 +542,7 @@ Follow us (brand new): @epiviz  </p>
 Florin Chelaru, UMD</p>
 
 <ul>
-<li>CBCB@UMD: my group</li>
+<li>CBCB@UMD</li>
 <li>JHU/Harvard: Kasper Hansen, Winston Timp, Rafael Irizarry, Andy Feinberg</li>
 <li>Genentech: Michael Lawrence</li>
 <li>Rstudio: Joe Cheng, et al.</li>
@@ -613,26 +667,44 @@ Florin Chelaru, UMD</p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='Project status'>
+        data-slide=19 title='Build your own browser'>
          19
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='What&#39;s coming very soon'>
+        data-slide=20 title='Analysis era'>
          20
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='Check it out:'>
+        data-slide=21 title='Creativity in exploration'>
          21
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title='Acknowledgements'>
+        data-slide=22 title='Visualization goals'>
          22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='Visualization goals'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Check it out:'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='Acknowledgements'>
+         25
       </a>
     </li>
   </ul>

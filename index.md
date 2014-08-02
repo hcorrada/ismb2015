@@ -1,6 +1,6 @@
 ---
-title       :  Epiviz(r)
-subtitle    : Turning a genome browser into a display device
+title       :  Interactive and exploratory visualization of epigenome-wide data
+subtitle    : The Epiviz(r) project
 author      : Hector Corrada Bravo
 job         : Center for Bioinformatics and Computational Biology, University of Maryland
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -167,12 +167,6 @@ mgr$slideshow(slideShowRegions)
 mgr$stopServer()
 ```
 
-- More info in the `epivizr` vignette:
-
-```r
-browseVignettes("epivizr")
-```
-
 > `epivizr` uses WebSockets for connection, same as `shiny`. Big, big, big
 > thanks to the @rstudio folks for working on this infrastructure.
 
@@ -262,19 +256,7 @@ http://epiviz.cbcb.umd.edu/?ws=SRHZlWRRAPd&gist[]=a82a998817564ce3fe48&settings=
 
 --- 
 
-## Project status 
-
-> - Pretty solid `javascript` app source: http://github.com/epiviz/epiviz
-> - Documentation site: http://epiviz.github.io
-> - Data hosted at UMD servers, about to ramp up what's available
-> - Code used for data server also available: http://github.com/epiviz/epiviz-data
-> - `epivizr` in `Bioconductor` since summer 2013
-> - There was a major, major rewrite earlier this year
-> - Publication in Nature Methods out on Monday
-
----
-
-## What's coming very soon 
+## Build your own browser 
 
 - Standalone version (no internet required, javascript code provided in `epivizr`)
 - Browse your favorite genome:
@@ -287,7 +269,54 @@ mgr <- startStandalone(geneInfo=Mus.musculus, geneInfoName="mm10",
     				      keepSeqlevels=paste0("chr",c(1:19,"X","Y")))
 ```
 
-- Support for `BigWigFile`, `BamFile` through `epivizr` (initially targeted to RNA-seq workflows)
+---
+
+## Analysis era
+
+<div class="centered">
+<img src="images/hadley.png" style="max-height: 50%; max-width: 50%"/>
+<img src="images/hadley2.png" style="max-height: 30%; max-width: 30%"/>
+<footer class="source">[H. Wickham]</footer>
+</div>
+
+One interpretation of *Big Data* is *Many relevant sources of contextual data*
+
+- Easily access/integrate *contextual* data
+- Driven by exploratory analysis of *immediate* data
+- Iterative process
+- Visual and computational exploration go hand in hand
+
+---
+
+## Creativity in exploration
+
+We are building a software system to support creative exploratory analysis of genome-wide datasets...
+
+<iframe data-src="http://bulletin.imstat.org/2014/05/terrence's-stuff-creativity-in-statistics/"></iframe>
+
+---
+
+## Visualization goals
+
+- Context 
+  - Integrate and align multiple data sources; navigate; search
+  - *Connect*: brushing
+  - *Encode*: map visualization properties to data on the fly
+  - *Reconfigure*: multiple views of the same data
+
+<footer class="source">[Perer & Shneiderman]</footer>
+
+---
+
+## Visualization goals
+
+- Context 
+- Data
+  - *Select and filter*: tight-knit integration with R/Bioconductor; (future) filters on visualization propagate to data environment
+- Model
+    - New 'measurements' the result of modeling suggested by data context
+
+<footer class="source">[Perer & Shneiderman]</footer>
 
 ---
 
@@ -297,10 +326,10 @@ mgr <- startStandalone(geneInfo=Mus.musculus, geneInfoName="mm10",
 - http://epiviz.cbcb.umd.edu
 - http://github.com/epiviz
 
-Nature Methods on Monday!  
+Nature Methods as of 2 hours ago...    
 Follow us (brand new): @epiviz  
 
-These slides available: http://epiviz.github.io/bioc2014
+These slides available: http://hcorrada.github.io/jsm2014
 
 ---
 
@@ -309,7 +338,7 @@ These slides available: http://epiviz.github.io/bioc2014
 <img src="http://www.cs.umd.edu/~florinc/images/me.png"/>
 Florin Chelaru, UMD
 
-- CBCB@UMD: my group
+- CBCB@UMD
 - JHU/Harvard: Kasper Hansen, Winston Timp, Rafael Irizarry, Andy Feinberg
 - Genentech: Michael Lawrence
 - Rstudio: Joe Cheng, et al.
