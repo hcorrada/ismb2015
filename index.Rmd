@@ -77,7 +77,7 @@ Measuring DNA methylation and understanding role in expression regulation in sol
 > - Funding agencies calling for proposals to (strictly) *analyze* project data
 >  - Epigenomics roadmap, Encode, TCGA, ...
 > - Journals calling for (strictly) *analysis* papers (e.g., Nature Methods)
-> - *We have unprecendented ability to measure*
+> - *We have unprecedented ability to measure*
 > - *and lots of publicly available data to contextualize it*
 
 --- 
@@ -87,7 +87,7 @@ Measuring DNA methylation and understanding role in expression regulation in sol
 - Funding agencies calling for proposals to (strictly) *analyze* project data
 - Epigenomics roadmap, Encode, TCGA, ...
 - Journals calling for (strictly) *analysis* papers (e.g., Nature Methods)
-- *We have unprecendented ability to measure*
+- *We have unprecedented ability to measure*
 - *and lots of publicly available data to contextualize it*
 
 <div class="centered">
