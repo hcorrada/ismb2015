@@ -77,6 +77,21 @@ Consistent hyper-variability can be used as stable signatures.
 
 Measuring DNA methylation and understanding role in expression regulation in solid tumors
 <div class="centered">
+<img src="images/relapse.png" style="max-height: 8%; max-width: 8%"/>
+</div>
+
+Degree of expression deviation from normality in specific genes can be used as prognostic tool.
+
+- Hansen, et al., *Nat. Genetics*, 2011
+- Corrada Bravo, et al., *BMC Bioinformatics*, 2012
+- **Dinalankara and Corrada Bravo, *Cancer Informatics*, in press**
+- Timp, et al., *Genome Medicine*, 2014
+
+---
+## Our motivation
+
+Measuring DNA methylation and understanding role in expression regulation in solid tumors
+<div class="centered">
 <img src="images/minfi.png" style="max-height: 60%; max-width: 60%"/>
 </div>
 
