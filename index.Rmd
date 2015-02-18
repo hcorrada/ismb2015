@@ -1,6 +1,6 @@
 ---
 title       :  Interactive and exploratory visualization of epigenome-wide data
-subtitle    : JSM2014, August 3, 2014
+subtitle    : Molecular Medicine Tri-Conference, February 18, 2015
 author      : Hector Corrada Bravo
 job         : Center for Bioinformatics and Computational Biology, University of Maryland
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -15,11 +15,15 @@ knit        : slidify::knit2slides
 
 Measuring DNA methylation and understanding role in expression regulation in solid tumors
 
-![](images/block.png)
+<div class="centered">
+<img src="images/block.png" style="max-height: 100%; max-width: 100%"/>
+</div>
 
-- Hansen, et al., *Nat. Genetics*, 2011
+Large blocks of *hypo-methylation* (sometimes Mbps long) in colon cancer
+
+- **Hansen, et al., *Nat. Genetics*, 2011**
 - Corrada Bravo, et al., *BMC Bioinformatics*, 2012
-- Timp, et al., *Genome Medicine*, in press.
+- Timp, et al., *Genome Medicine*, 2014
 
 ---
 
@@ -27,12 +31,14 @@ Measuring DNA methylation and understanding role in expression regulation in sol
 
 Measuring DNA methylation and understanding role in expression regulation in solid tumors
 <div class="centered">
-<img src="images/antiprofile.png" style="max-height: 55%; max-width: 55%"/>
+<img src="images/antiprofile.png" style="max-height: 45%; max-width: 45%"/>
 </div>
 
-- Hansen, et al., *Nat. Genetics*, 2011
+Genes with *hyper-variable* expression in colon cancer are enriched within these blocks.
+
+- **Hansen, et al., *Nat. Genetics*, 2011**
 - Corrada Bravo, et al., *BMC Bioinformatics*, 2012
-- Timp, et al., *Genome Medicine*, in press.
+- Timp, et al., *Genome Medicine*, 2014
 
 ---
 
@@ -40,13 +46,15 @@ Measuring DNA methylation and understanding role in expression regulation in sol
 
 Measuring DNA methylation and understanding role in expression regulation in solid tumors
 <div class="centered">
-<img src="images/barcode.png" style="max-height: 55%; max-width: 55%"/>
-<img src="images/barcode2.png" style="max-height: 55%; max-width: 55%"/>
+<img src="images/barcode.png" style="max-height: 45%; max-width: 45%"/>
+<img src="images/barcode2.png" style="max-height: 45%; max-width: 45%"/>
 </div>
 
+Genes with *consistent hyper-variable expression* across tumors are tissue-specific.
+
 - Hansen, et al., *Nat. Genetics*, 2011
-- Corrada Bravo, et al., *BMC Bioinformatics*, 2012
-- Timp, et al., *Genome Medicine*, in press.
+- **Corrada Bravo, et al., *BMC Bioinformatics*, 2012**
+- Timp, et al., *Genome Medicine*, 2014
 
 ---
 
@@ -54,18 +62,103 @@ Measuring DNA methylation and understanding role in expression regulation in sol
 
 Measuring DNA methylation and understanding role in expression regulation in solid tumors
 <div class="centered">
-<img src="images/minfi.png" style="max-height: 80%; max-width: 80%"/>
+<img src="images/aucs.png" style="max-height: 30%; max-width: 30%"/>
 </div>
+
+Consistent hyper-variability can be used as stable signatures.
+
+- Hansen, et al., *Nat. Genetics*, 2011
+- **Corrada Bravo, et al., *BMC Bioinformatics*, 2012**
+- Timp, et al., *Genome Medicine*, 2014
+
+---
+
+## Our motivation
+
+Measuring DNA methylation and understanding role in expression regulation in solid tumors
+<div class="centered">
+<img src="images/minfi.png" style="max-height: 60%; max-width: 60%"/>
+</div>
+
+Blocks can be detected using Illumina HumanMethylation450k bead arrays.
 
 - Hansen, et al., *Nat. Genetics*, 2011
 - Corrada Bravo, et al., *BMC Bioinformatics*, 2012
-- Timp, et al., *Genome Medicine*, in press.
+- **Timp, et al., *Genome Medicine*, 2014**
+
+---
+
+## Our motivation
+
+Measuring DNA methylation and understanding role in expression regulation in solid tumors
+<div class="centered">
+<img src="images/timp1.png" style="max-height: 70%; max-width: 70%"/>
+</div>
+
+Hypo-methylation blocks occur in all tumor types. Some universal, many cancer-specific
+
+- Hansen, et al., *Nat. Genetics*, 2011
+- Corrada Bravo, et al., *BMC Bioinformatics*, 2012
+- **Timp, et al., *Genome Medicine*, 2014**
+
+## Our motivation
+
+Measuring DNA methylation and understanding role in expression regulation in solid tumors
+<div class="centered">
+<img src="images/timp2.png" style="max-height: 70%; max-width: 70%"/>
+</div>
+
+Gene expression *hyper-variability* is enriched within *hypo-methylation* blocks
+
+- Hansen, et al., *Nat. Genetics*, 2011
+- Corrada Bravo, et al., *BMC Bioinformatics*, 2012
+- **Timp, et al., *Genome Medicine*, 2014**
+
+---
+
+## Our motivation
+
+Measuring DNA methylation and understanding role in expression regulation in solid tumors
+<div class="centered">
+<img src="images/timp3.png" style="max-height: 70%; max-width: 70%"/>
+</div>
+
+Degree of hypo-methylation increases through cancer progression in blocks.
+
+- Hansen, et al., *Nat. Genetics*, 2011
+- Corrada Bravo, et al., *BMC Bioinformatics*, 2012
+- **Timp, et al., *Genome Medicine*, 2014**
+
+---
+
+## Summary
+
+- Large regions of hypo-methylation seems to be consistent in cancer
+  - occur in pre-cancerous lesions
+  - hypo-methylation increases with cancer progression
+- Gene expression hyper-variability enriched within these regions
+  - tissue-specific genes enriched within these regions
+  - can use degree of deviation from normality as stable diagnosis and prognosis mark in multiple cancer types
+
+
+---
+
+## R/Bioconductor
+
+<div class="centered">
+<img src="images/rbioc.png" style="max-height: 70%; max-width: 70%"/>
+</div>
+
+- State-of-the-art computational and statistical analysis
+platform
+- We develop and apply methods for these analyses in this platform
+- Our collaborators take part in analysis in this platform
 
 ---
 
 ## What we wanted
 
-> - Data transformation and modeling: data smoothing, region finding (`Bsmooth`, `minfi`)
+> - Data transformation and modeling: data smoothing, region finding (R/Bioconductor: `Bsmooth`, `minfi`)
 > - Genome browsing: search by gene, search by overlap
 > - Region analysis: overlap with other data (our own, other labs, UCSC, ensembl)
 > - Regulation: expression data (Gene Expression Barcode)
@@ -112,12 +205,12 @@ Measuring DNA methylation and understanding role in expression regulation in sol
 
 > **I want to use a genome browser track as a display device in R!!**
 
-e.g.: http://epiviz.cbcb.umd.edu/?ws=45KBV4C7z3u
-<footer class="source">[Nat. Methods, *in press*]</footer>
+e.g.: http://epiviz.cbcb.umd.edu/2?ws=45KBV4C7z3u
+<footer class="source">[Nat. Methods, 2014]</footer>
 
 ---
 
-<iframe data-src="http://epiviz.cbcb.umd.edu/?ws=W3ieGz19icm" width="99%"></iframe>
+<iframe data-src="http://epiviz.cbcb.umd.edu/2/?ws=W3ieGz19icm" width="99%"></iframe>
 
 ---
 
@@ -128,8 +221,6 @@ Using the `epivizr` package
 - Setup up an `epivizr` session
 
 ```r
-library(epivizr)
-data(tcga_colon_example)
 mgr <- startEpiviz(workspace="qyOTB6vVnff")
 ```
 
@@ -156,15 +247,9 @@ Using the `epivizr` package: browse by regions of interest.
 
 ```r
 o <- order(-width(colon_blocks))
-slideShowRegions <- colon_blocks[o[1:10],]
+slideShowRegions <- colon_blocks[o[1:5],]
 slideShowRegions <- slideShowRegions + 1e5
 mgr$slideshow(slideShowRegions)
-```
-
-- Close session
-
-```r
-mgr$stopServer()
 ```
 
 > `epivizr` uses WebSockets for connection, same as `shiny`. Big, big, big
@@ -174,63 +259,28 @@ mgr$stopServer()
 
 ## Plugins, plugins, plugins
 
-This is how we integrate different data types and add new visualizations.
+Our architecture is *dynamically extensible*. We can easily integrate new data types and add new visualizations.
+
+Example: adding a new visualization
 
 see: https://gist.github.com/11017650
-
-```javascript
-epiviz.plugins.charts.MyTrack.prototype.draw = function(range, data, slide, zoom) {
-  epiviz.ui.charts.Track.prototype.draw.call(this, range, data, slide, zoom);
-
-  // If data is defined, then the base class sets this._lastData to data.
-  // If it isn't, then we'll use the data from the last draw call.
-  // Same with this._lastRange and range.
-  data = this._lastData;
-  range = this._lastRange;
-
-  // If data is not defined, there is nothing to draw
-  if (!data || !range) { return []; }
-
-  // Using D3, compute a function that maps base-pair locations to chart pixel coordinates
-  var xScale = d3.scale.linear()
-    .domain([range.start(), range.end()])
-    .range([0, this.width() - this.margins().left() - this.margins().right()]);
-```
 
 ---
 
 http://epiviz.cbcb.umd.edu/?gist[]=11017650&ws=Y8kWxCO2Ajn
-<iframe data-src="http://epiviz.cbcb.umd.edu/?gist[]=11017650&ws=Y8kWxCO2Ajn"></iframe>
+<iframe data-src="http://epiviz.cbcb.umd.edu/2/?gist[]=11017650&ws=Y8kWxCO2Ajn"></iframe>
 
 ---
 ## Plugins, plugins, plugins
 
+Example: import data from UCSC browser
+
 see: https://gist.github.com/c41a2df3671395d8e4ad
-
-```javascript
-goog.provide('epiviz.plugins.data.UCSCDataProvider');
-
-epiviz.plugins.data.UCSCDataProvider = function (id, endpoint) {
-  epiviz.data.DataProvider.call(this, id || epiviz.plugins.data.UCSCDataProvider.DEFAULT_ID);
- 
-  this._endpoint = endpoint;
- 
-  this._refGene = new epiviz.measurements.Measurement(
-    'refGene', // The column in the data source table that contains the values for this feature measurement
-    'refGene', // A name not containing any special characters (only alphanumeric and underscores)
-    epiviz.measurements.Measurement.Type.RANGE,
-    'refGene', // Data source: the table/data frame containing the data
-    'ucsc_refGene', // An identifier for use to group with other measurements from different data providers
-    // that have the same seqName, start and end values
-    this.id(), // Data provider
-    null, // Formula: always null for measurements coming directly from the data provider
-    'any', // Default chart type filter
-```
 
 ---
 
 http://epiviz.cbcb.umd.edu/?ws=cX1PgToUQs&seqName=chr11&start=59463945&end=60638081&gist[]=c41a2df3671395d8e4ad&settings=default&
-<iframe data-src="http://epiviz.cbcb.umd.edu/?ws=cX1PgToUQs&seqName=chr11&start=59463945&end=60638081&gist[]=c41a2df3671395d8e4ad&settings=default&"></iframe>
+<iframe data-src="http://epiviz.cbcb.umd.edu/2/?ws=cX1PgToUQs&seqName=chr11&start=59463945&end=60638081&gist[]=c41a2df3671395d8e4ad&settings=default&"></iframe>
 
 ---
 
@@ -252,7 +302,7 @@ http://epiviz.cbcb.umd.edu/?ws=cX1PgToUQs&seqName=chr11&start=59463945&end=60638
 ---
 
 http://epiviz.cbcb.umd.edu/?ws=SRHZlWRRAPd&gist[]=a82a998817564ce3fe48&settings=default&
-<iframe data-src="http://epiviz.cbcb.umd.edu/?ws=SRHZlWRRAPd&gist[]=a82a998817564ce3fe48&settings=default&"></iframe>
+<iframe data-src="http://epiviz.cbcb.umd.edu/2/?ws=SRHZlWRRAPd&gist[]=a82a998817564ce3fe48&settings=default&"></iframe>
 
 --- 
 
@@ -290,7 +340,7 @@ One interpretation of *Big Data* is *Many relevant sources of contextual data*
 
 ## Creativity in exploration
 
-We are building a software system to support creative exploratory analysis of genome-wide datasets...
+We are building a software system to support creative exploratory analysis of epigenome-wide datasets...
 
 <div class="centered">
 <img src="images/terry.png" style="max-height: 60%; max-width: 60%"/>
@@ -328,16 +378,16 @@ We are building a software system to support creative exploratory analysis of ge
 - http://epiviz.cbcb.umd.edu
 - http://github.com/epiviz
 
-Nature Methods as of 2 hours ago...    
-Follow us (brand new): @epiviz  
+Nature Methods 2014    
+Follow us: @epiviz  
 
-These slides available: http://hcorrada.github.io/jsm2014
+These slides available: http://hcorrada.github.io/tricon2015
 
 ---
 
 ## Acknowledgements
 
-<img src="http://www.cs.umd.edu/~florinc/images/me.png"/>
+<img src="http://www.cs.umd.edu/~florinc/img/florin_chelaru.jpg"/>
 Florin Chelaru, UMD
 
 - CBCB@UMD

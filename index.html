@@ -35,7 +35,7 @@
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
     <h1>Interactive and exploratory visualization of epigenome-wide data</h1>
-    <h2>JSM2014, August 3, 2014</h2>
+    <h2>Molecular Medicine Tri-Conference, February 18, 2015</h2>
     <p>Hector Corrada Bravo<br/>Center for Bioinformatics and Computational Biology, University of Maryland</p>
   </hgroup>
   <article></article>  
@@ -50,12 +50,16 @@
   <article data-timings="">
     <p>Measuring DNA methylation and understanding role in expression regulation in solid tumors</p>
 
-<p><img src="images/block.png" alt=""></p>
+<div class="centered">
+<img src="images/block.png" style="max-height: 100%; max-width: 100%"/>
+</div>
+
+<p>Large blocks of <em>hypo-methylation</em> (sometimes Mbps long) in colon cancer</p>
 
 <ul>
-<li>Hansen, et al., <em>Nat. Genetics</em>, 2011</li>
+<li><strong>Hansen, et al., <em>Nat. Genetics</em>, 2011</strong></li>
 <li>Corrada Bravo, et al., <em>BMC Bioinformatics</em>, 2012</li>
-<li>Timp, et al., <em>Genome Medicine</em>, in press.</li>
+<li>Timp, et al., <em>Genome Medicine</em>, 2014</li>
 </ul>
 
   </article>
@@ -70,13 +74,15 @@
     <p>Measuring DNA methylation and understanding role in expression regulation in solid tumors</p>
 
 <div class="centered">
-<img src="images/antiprofile.png" style="max-height: 55%; max-width: 55%"/>
+<img src="images/antiprofile.png" style="max-height: 45%; max-width: 45%"/>
 </div>
 
+<p>Genes with <em>hyper-variable</em> expression in colon cancer are enriched within these blocks.</p>
+
 <ul>
-<li>Hansen, et al., <em>Nat. Genetics</em>, 2011</li>
+<li><strong>Hansen, et al., <em>Nat. Genetics</em>, 2011</strong></li>
 <li>Corrada Bravo, et al., <em>BMC Bioinformatics</em>, 2012</li>
-<li>Timp, et al., <em>Genome Medicine</em>, in press.</li>
+<li>Timp, et al., <em>Genome Medicine</em>, 2014</li>
 </ul>
 
   </article>
@@ -91,14 +97,16 @@
     <p>Measuring DNA methylation and understanding role in expression regulation in solid tumors</p>
 
 <div class="centered">
-<img src="images/barcode.png" style="max-height: 55%; max-width: 55%"/>
-<img src="images/barcode2.png" style="max-height: 55%; max-width: 55%"/>
+<img src="images/barcode.png" style="max-height: 45%; max-width: 45%"/>
+<img src="images/barcode2.png" style="max-height: 45%; max-width: 45%"/>
 </div>
+
+<p>Genes with <em>consistent hyper-variable expression</em> across tumors are tissue-specific.</p>
 
 <ul>
 <li>Hansen, et al., <em>Nat. Genetics</em>, 2011</li>
-<li>Corrada Bravo, et al., <em>BMC Bioinformatics</em>, 2012</li>
-<li>Timp, et al., <em>Genome Medicine</em>, in press.</li>
+<li><strong>Corrada Bravo, et al., <em>BMC Bioinformatics</em>, 2012</strong></li>
+<li>Timp, et al., <em>Genome Medicine</em>, 2014</li>
 </ul>
 
   </article>
@@ -113,13 +121,15 @@
     <p>Measuring DNA methylation and understanding role in expression regulation in solid tumors</p>
 
 <div class="centered">
-<img src="images/minfi.png" style="max-height: 80%; max-width: 80%"/>
+<img src="images/aucs.png" style="max-height: 30%; max-width: 30%"/>
 </div>
+
+<p>Consistent hyper-variability can be used as stable signatures.</p>
 
 <ul>
 <li>Hansen, et al., <em>Nat. Genetics</em>, 2011</li>
-<li>Corrada Bravo, et al., <em>BMC Bioinformatics</em>, 2012</li>
-<li>Timp, et al., <em>Genome Medicine</em>, in press.</li>
+<li><strong>Corrada Bravo, et al., <em>BMC Bioinformatics</em>, 2012</strong></li>
+<li>Timp, et al., <em>Genome Medicine</em>, 2014</li>
 </ul>
 
   </article>
@@ -128,11 +138,140 @@
 
 <slide class="" id="slide-5" style="background:;">
   <hgroup>
+    <h2>Our motivation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Measuring DNA methylation and understanding role in expression regulation in solid tumors</p>
+
+<div class="centered">
+<img src="images/minfi.png" style="max-height: 60%; max-width: 60%"/>
+</div>
+
+<p>Blocks can be detected using Illumina HumanMethylation450k bead arrays.</p>
+
+<ul>
+<li>Hansen, et al., <em>Nat. Genetics</em>, 2011</li>
+<li>Corrada Bravo, et al., <em>BMC Bioinformatics</em>, 2012</li>
+<li><strong>Timp, et al., <em>Genome Medicine</em>, 2014</strong></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Our motivation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Measuring DNA methylation and understanding role in expression regulation in solid tumors</p>
+
+<div class="centered">
+<img src="images/timp1.png" style="max-height: 70%; max-width: 70%"/>
+</div>
+
+<p>Hypo-methylation blocks occur in all tumor types. Some universal, many cancer-specific</p>
+
+<ul>
+<li>Hansen, et al., <em>Nat. Genetics</em>, 2011</li>
+<li>Corrada Bravo, et al., <em>BMC Bioinformatics</em>, 2012</li>
+<li><strong>Timp, et al., <em>Genome Medicine</em>, 2014</strong></li>
+</ul>
+
+<h2>Our motivation</h2>
+
+<p>Measuring DNA methylation and understanding role in expression regulation in solid tumors</p>
+
+<div class="centered">
+<img src="images/timp2.png" style="max-height: 70%; max-width: 70%"/>
+</div>
+
+<p>Gene expression <em>hyper-variability</em> is enriched within <em>hypo-methylation</em> blocks</p>
+
+<ul>
+<li>Hansen, et al., <em>Nat. Genetics</em>, 2011</li>
+<li>Corrada Bravo, et al., <em>BMC Bioinformatics</em>, 2012</li>
+<li><strong>Timp, et al., <em>Genome Medicine</em>, 2014</strong></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Our motivation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Measuring DNA methylation and understanding role in expression regulation in solid tumors</p>
+
+<div class="centered">
+<img src="images/timp3.png" style="max-height: 70%; max-width: 70%"/>
+</div>
+
+<p>Degree of hypo-methylation increases through cancer progression in blocks.</p>
+
+<ul>
+<li>Hansen, et al., <em>Nat. Genetics</em>, 2011</li>
+<li>Corrada Bravo, et al., <em>BMC Bioinformatics</em>, 2012</li>
+<li><strong>Timp, et al., <em>Genome Medicine</em>, 2014</strong></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Summary</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Large regions of hypo-methylation seems to be consistent in cancer
+
+<ul>
+<li>occur in pre-cancerous lesions</li>
+<li>hypo-methylation increases with cancer progression</li>
+</ul></li>
+<li>Gene expression hyper-variability enriched within these regions
+
+<ul>
+<li>tissue-specific genes enriched within these regions</li>
+<li>can use degree of deviation from normality as stable diagnosis and prognosis mark in multiple cancer types</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>R/Bioconductor</h2>
+  </hgroup>
+  <article data-timings="">
+    <div class="centered">
+<img src="images/rbioc.png" style="max-height: 70%; max-width: 70%"/>
+</div>
+
+<ul>
+<li>State-of-the-art computational and statistical analysis
+platform</li>
+<li>We develop and apply methods for these analyses in this platform</li>
+<li>Our collaborators take part in analysis in this platform</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
     <h2>What we wanted</h2>
   </hgroup>
   <article data-timings="">
     <ul class = "build incremental">
-<li>Data transformation and modeling: data smoothing, region finding (<code>Bsmooth</code>, <code>minfi</code>)</li>
+<li>Data transformation and modeling: data smoothing, region finding (R/Bioconductor: <code>Bsmooth</code>, <code>minfi</code>)</li>
 <li>Genome browsing: search by gene, search by overlap</li>
 <li>Region analysis: overlap with other data (our own, other labs, UCSC, ensembl)</li>
 <li>Regulation: expression data (Gene Expression Barcode)</li>
@@ -142,7 +281,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-6" style="background:;">
+<slide class="" id="slide-11" style="background:;">
   <hgroup>
     <h2>Analysis era</h2>
   </hgroup>
@@ -162,7 +301,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-7" style="background:;">
+<slide class="" id="slide-12" style="background:;">
   <hgroup>
     <h2>Analysis era</h2>
   </hgroup>
@@ -185,7 +324,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-8" style="background:;">
+<slide class="" id="slide-13" style="background:;">
   <article data-timings="">
     <div class="centered">
 <img src="images/epiviz_2_logo_medium.png" style="max-height: 40%; max-width: 40%"/>
@@ -205,22 +344,22 @@
 <p><strong>I want to use a genome browser track as a display device in R!!</strong></p>
 </blockquote>
 
-<p>e.g.: <a href="http://epiviz.cbcb.umd.edu/?ws=45KBV4C7z3u">http://epiviz.cbcb.umd.edu/?ws=45KBV4C7z3u</a>
-<footer class="source">[Nat. Methods, <em>in press</em>]</footer></p>
+<p>e.g.: <a href="http://epiviz.cbcb.umd.edu/2?ws=45KBV4C7z3u">http://epiviz.cbcb.umd.edu/2?ws=45KBV4C7z3u</a>
+<footer class="source">[Nat. Methods, 2014]</footer></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-9" style="background:;">
+<slide class="" id="slide-14" style="background:;">
   <article data-timings="">
-    <iframe data-src="http://epiviz.cbcb.umd.edu/?ws=W3ieGz19icm" width="99%"></iframe>
+    <iframe data-src="http://epiviz.cbcb.umd.edu/2/?ws=W3ieGz19icm" width="99%"></iframe>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-10" style="background:;">
+<slide class="" id="slide-15" style="background:;">
   <hgroup>
     <h2>Communication with R/Bioc</h2>
   </hgroup>
@@ -231,9 +370,7 @@
 <li>Setup up an <code>epivizr</code> session</li>
 </ul>
 
-<pre><code class="r">library(epivizr)
-data(tcga_colon_example)
-mgr &lt;- startEpiviz(workspace=&quot;qyOTB6vVnff&quot;)
+<pre><code class="r">mgr &lt;- startEpiviz(workspace=&quot;qyOTB6vVnff&quot;)
 </code></pre>
 
 <ul>
@@ -255,7 +392,7 @@ mgr$updateDevice(blocks_dev, colon_blocks[keep,])
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-11" style="background:;">
+<slide class="" id="slide-16" style="background:;">
   <hgroup>
     <h2>Communication with R/Bioc</h2>
   </hgroup>
@@ -267,16 +404,9 @@ mgr$updateDevice(blocks_dev, colon_blocks[keep,])
 </ul>
 
 <pre><code class="r">o &lt;- order(-width(colon_blocks))
-slideShowRegions &lt;- colon_blocks[o[1:10],]
+slideShowRegions &lt;- colon_blocks[o[1:5],]
 slideShowRegions &lt;- slideShowRegions + 1e5
 mgr$slideshow(slideShowRegions)
-</code></pre>
-
-<ul>
-<li>Close session</li>
-</ul>
-
-<pre><code class="r">mgr$stopServer()
 </code></pre>
 
 <blockquote>
@@ -288,88 +418,55 @@ thanks to the @rstudio folks for working on this infrastructure.</p>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-12" style="background:;">
+<slide class="" id="slide-17" style="background:;">
   <hgroup>
     <h2>Plugins, plugins, plugins</h2>
   </hgroup>
   <article data-timings="">
-    <p>This is how we integrate different data types and add new visualizations.</p>
+    <p>Our architecture is <em>dynamically extensible</em>. We can easily integrate new data types and add new visualizations.</p>
+
+<p>Example: adding a new visualization</p>
 
 <p>see: <a href="https://gist.github.com/11017650">https://gist.github.com/11017650</a></p>
 
-<pre><code class="javascript">epiviz.plugins.charts.MyTrack.prototype.draw = function(range, data, slide, zoom) {
-  epiviz.ui.charts.Track.prototype.draw.call(this, range, data, slide, zoom);
-
-  // If data is defined, then the base class sets this._lastData to data.
-  // If it isn&#39;t, then we&#39;ll use the data from the last draw call.
-  // Same with this._lastRange and range.
-  data = this._lastData;
-  range = this._lastRange;
-
-  // If data is not defined, there is nothing to draw
-  if (!data || !range) { return []; }
-
-  // Using D3, compute a function that maps base-pair locations to chart pixel coordinates
-  var xScale = d3.scale.linear()
-    .domain([range.start(), range.end()])
-    .range([0, this.width() - this.margins().left() - this.margins().right()]);
-</code></pre>
-
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-13" style="background:;">
+<slide class="" id="slide-18" style="background:;">
   <article data-timings="">
     <p><a href="http://epiviz.cbcb.umd.edu/?gist%5B%5D=11017650&amp;ws=Y8kWxCO2Ajn">http://epiviz.cbcb.umd.edu/?gist[]=11017650&amp;ws=Y8kWxCO2Ajn</a></p>
 
-<iframe data-src="http://epiviz.cbcb.umd.edu/?gist[]=11017650&ws=Y8kWxCO2Ajn"></iframe>
+<iframe data-src="http://epiviz.cbcb.umd.edu/2/?gist[]=11017650&ws=Y8kWxCO2Ajn"></iframe>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-14" style="background:;">
+<slide class="" id="slide-19" style="background:;">
   <hgroup>
     <h2>Plugins, plugins, plugins</h2>
   </hgroup>
   <article data-timings="">
-    <p>see: <a href="https://gist.github.com/c41a2df3671395d8e4ad">https://gist.github.com/c41a2df3671395d8e4ad</a></p>
+    <p>Example: import data from UCSC browser</p>
 
-<pre><code class="javascript">goog.provide(&#39;epiviz.plugins.data.UCSCDataProvider&#39;);
-
-epiviz.plugins.data.UCSCDataProvider = function (id, endpoint) {
-  epiviz.data.DataProvider.call(this, id || epiviz.plugins.data.UCSCDataProvider.DEFAULT_ID);
-
-  this._endpoint = endpoint;
-
-  this._refGene = new epiviz.measurements.Measurement(
-    &#39;refGene&#39;, // The column in the data source table that contains the values for this feature measurement
-    &#39;refGene&#39;, // A name not containing any special characters (only alphanumeric and underscores)
-    epiviz.measurements.Measurement.Type.RANGE,
-    &#39;refGene&#39;, // Data source: the table/data frame containing the data
-    &#39;ucsc_refGene&#39;, // An identifier for use to group with other measurements from different data providers
-    // that have the same seqName, start and end values
-    this.id(), // Data provider
-    null, // Formula: always null for measurements coming directly from the data provider
-    &#39;any&#39;, // Default chart type filter
-</code></pre>
+<p>see: <a href="https://gist.github.com/c41a2df3671395d8e4ad">https://gist.github.com/c41a2df3671395d8e4ad</a></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-15" style="background:;">
+<slide class="" id="slide-20" style="background:;">
   <article data-timings="">
     <p><a href="http://epiviz.cbcb.umd.edu/?ws=cX1PgToUQs&amp;seqName=chr11&amp;start=59463945&amp;end=60638081&amp;gist%5B%5D=c41a2df3671395d8e4ad&amp;settings=default&amp;">http://epiviz.cbcb.umd.edu/?ws=cX1PgToUQs&amp;seqName=chr11&amp;start=59463945&amp;end=60638081&amp;gist[]=c41a2df3671395d8e4ad&amp;settings=default&amp;</a></p>
 
-<iframe data-src="http://epiviz.cbcb.umd.edu/?ws=cX1PgToUQs&seqName=chr11&start=59463945&end=60638081&gist[]=c41a2df3671395d8e4ad&settings=default&"></iframe>
+<iframe data-src="http://epiviz.cbcb.umd.edu/2/?ws=cX1PgToUQs&seqName=chr11&start=59463945&end=60638081&gist[]=c41a2df3671395d8e4ad&settings=default&"></iframe>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-16" style="background:;">
+<slide class="" id="slide-21" style="background:;">
   <hgroup>
     <h2>Plugins, plugins, plugins</h2>
   </hgroup>
@@ -380,7 +477,7 @@ epiviz.plugins.data.UCSCDataProvider = function (id, endpoint) {
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-17" style="background:;">
+<slide class="" id="slide-22" style="background:;">
   <hgroup>
     <h1>Datatypes</h1>
   </hgroup>
@@ -398,17 +495,17 @@ epiviz.plugins.data.UCSCDataProvider = function (id, endpoint) {
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-18" style="background:;">
+<slide class="" id="slide-23" style="background:;">
   <article data-timings="">
     <p><a href="http://epiviz.cbcb.umd.edu/?ws=SRHZlWRRAPd&amp;gist%5B%5D=a82a998817564ce3fe48&amp;settings=default&amp;">http://epiviz.cbcb.umd.edu/?ws=SRHZlWRRAPd&amp;gist[]=a82a998817564ce3fe48&amp;settings=default&amp;</a></p>
 
-<iframe data-src="http://epiviz.cbcb.umd.edu/?ws=SRHZlWRRAPd&gist[]=a82a998817564ce3fe48&settings=default&"></iframe>
+<iframe data-src="http://epiviz.cbcb.umd.edu/2/?ws=SRHZlWRRAPd&gist[]=a82a998817564ce3fe48&settings=default&"></iframe>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-19" style="background:;">
+<slide class="" id="slide-24" style="background:;">
   <hgroup>
     <h2>Build your own browser</h2>
   </hgroup>
@@ -429,7 +526,7 @@ mgr &lt;- startStandalone(geneInfo=Mus.musculus, geneInfoName=&quot;mm10&quot;,
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-20" style="background:;">
+<slide class="" id="slide-25" style="background:;">
   <hgroup>
     <h2>Analysis era</h2>
   </hgroup>
@@ -453,12 +550,12 @@ mgr &lt;- startStandalone(geneInfo=Mus.musculus, geneInfoName=&quot;mm10&quot;,
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-21" style="background:;">
+<slide class="" id="slide-26" style="background:;">
   <hgroup>
     <h2>Creativity in exploration</h2>
   </hgroup>
   <article data-timings="">
-    <p>We are building a software system to support creative exploratory analysis of genome-wide datasets...</p>
+    <p>We are building a software system to support creative exploratory analysis of epigenome-wide datasets...</p>
 
 <p><div class="centered">
 <img src="images/terry.png" style="max-height: 60%; max-width: 60%"/>
@@ -468,7 +565,7 @@ mgr &lt;- startStandalone(geneInfo=Mus.musculus, geneInfoName=&quot;mm10&quot;,
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-22" style="background:;">
+<slide class="" id="slide-27" style="background:;">
   <hgroup>
     <h2>Visualization goals</h2>
   </hgroup>
@@ -490,7 +587,7 @@ mgr &lt;- startStandalone(geneInfo=Mus.musculus, geneInfoName=&quot;mm10&quot;,
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-23" style="background:;">
+<slide class="" id="slide-28" style="background:;">
   <hgroup>
     <h2>Visualization goals</h2>
   </hgroup>
@@ -515,7 +612,7 @@ mgr &lt;- startStandalone(geneInfo=Mus.musculus, geneInfoName=&quot;mm10&quot;,
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-24" style="background:;">
+<slide class="" id="slide-29" style="background:;">
   <hgroup>
     <h2>Check it out:</h2>
   </hgroup>
@@ -526,21 +623,21 @@ mgr &lt;- startStandalone(geneInfo=Mus.musculus, geneInfoName=&quot;mm10&quot;,
 <li><a href="http://github.com/epiviz">http://github.com/epiviz</a></li>
 </ul>
 
-<p>Nature Methods as of 2 hours ago...<br>
-Follow us (brand new): @epiviz  </p>
+<p>Nature Methods 2014<br>
+Follow us: @epiviz  </p>
 
-<p>These slides available: <a href="http://hcorrada.github.io/jsm2014">http://hcorrada.github.io/jsm2014</a></p>
+<p>These slides available: <a href="http://hcorrada.github.io/tricon2015">http://hcorrada.github.io/tricon2015</a></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-25" style="background:;">
+<slide class="" id="slide-30" style="background:;">
   <hgroup>
     <h2>Acknowledgements</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="http://www.cs.umd.edu/~florinc/images/me.png"/>
+    <p><img src="http://www.cs.umd.edu/~florinc/img/florin_chelaru.jpg"/>
 Florin Chelaru, UMD</p>
 
 <ul>
@@ -585,49 +682,49 @@ Florin Chelaru, UMD</p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='What we wanted'>
+        data-slide=5 title='Our motivation'>
          5
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='Analysis era'>
+        data-slide=6 title='Our motivation'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='Analysis era'>
+        data-slide=7 title='Our motivation'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title=''>
+        data-slide=8 title='Summary'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title=''>
+        data-slide=9 title='R/Bioconductor'>
          9
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='Communication with R/Bioc'>
+        data-slide=10 title='What we wanted'>
          10
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='Communication with R/Bioc'>
+        data-slide=11 title='Analysis era'>
          11
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='Plugins, plugins, plugins'>
+        data-slide=12 title='Analysis era'>
          12
       </a>
     </li>
@@ -639,25 +736,25 @@ Florin Chelaru, UMD</p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='Plugins, plugins, plugins'>
+        data-slide=14 title=''>
          14
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title=''>
+        data-slide=15 title='Communication with R/Bioc'>
          15
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=16 title='Plugins, plugins, plugins'>
+        data-slide=16 title='Communication with R/Bioc'>
          16
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='Datatypes'>
+        data-slide=17 title='Plugins, plugins, plugins'>
          17
       </a>
     </li>
@@ -669,44 +766,74 @@ Florin Chelaru, UMD</p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='Build your own browser'>
+        data-slide=19 title='Plugins, plugins, plugins'>
          19
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='Analysis era'>
+        data-slide=20 title=''>
          20
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='Creativity in exploration'>
+        data-slide=21 title='Plugins, plugins, plugins'>
          21
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title='Visualization goals'>
+        data-slide=22 title='Datatypes'>
          22
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=23 title='Visualization goals'>
+        data-slide=23 title=''>
          23
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=24 title='Check it out:'>
+        data-slide=24 title='Build your own browser'>
          24
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=25 title='Acknowledgements'>
+        data-slide=25 title='Analysis era'>
          25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='Creativity in exploration'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='Visualization goals'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='Visualization goals'>
+         28
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title='Check it out:'>
+         29
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=30 title='Acknowledgements'>
+         30
       </a>
     </li>
   </ul>
