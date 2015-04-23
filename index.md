@@ -16,15 +16,17 @@ knit        : slidify::knit2slides
 Measuring DNA methylation and understanding role in expression regulation in solid tumors
 
 <div class="centered">
-<img src="images/block.png" style="max-height: 100%; max-width: 100%"/>
+<img src="images/block.png" style="max-height: 90%; max-width: 90%"/>
 </div>
 
 Large blocks of *hypo-methylation* (sometimes Mbps long) in colon cancer
 
-- **Hansen, et al., *Nat. Genetics*, 2011**
-- Corrada Bravo, et al., *BMC Bioinformatics*, 2012
-- Timp, et al., *Genome Medicine*, 2014
-- Dinalankara, et al., *Cancer Informatics*, 2015
+<footer class="source">
+Hansen, et al., *Nat. Genetics*, 2011<br>
+Corrada Bravo, et al., *BMC Bioinformatics*, 2012<br>
+Timp, et al., *Genome Medicine*, 2014<br>
+Dinalankara, et al., *Cancer Informatics*, 2015<br>
+</footer>
 
 ---
 
@@ -35,12 +37,14 @@ Measuring DNA methylation and understanding role in expression regulation in sol
 <img src="images/antiprofile.png" style="max-height: 45%; max-width: 45%"/>
 </div>
 
-Genes with *hyper-variable* expression in colon cancer are enriched within these blocks.
+*Hyper-variable* genes are enriched within these blocks.
 
-- **Hansen, et al., *Nat. Genetics*, 2011**
-- Corrada Bravo, et al., *BMC Bioinformatics*, 2012
-- Timp, et al., *Genome Medicine*, 2014
-- Dinalankara, et al., *Cancer Informatics*, 2015
+<footer class="source">
+Hansen, et al., *Nat. Genetics*, 2011<br>
+Corrada Bravo, et al., *BMC Bioinformatics*, 2012<br>
+Timp, et al., *Genome Medicine*, 2014<br>
+Dinalankara, et al., *Cancer Informatics*, 2015<br>
+</footer>
 
 ---
 
@@ -52,12 +56,14 @@ Measuring DNA methylation and understanding role in expression regulation in sol
 <img src="images/barcode2.png" style="max-height: 45%; max-width: 45%"/>
 </div>
 
-Genes with *consistent hyper-variable expression* across tumors are tissue-specific.
+*Consistently hyper-variable* genes are tissue-specific.
 
-- Hansen, et al., *Nat. Genetics*, 2011
-- **Corrada Bravo, et al., *BMC Bioinformatics*, 2012**
-- Timp, et al., *Genome Medicine*, 2014
-- Dinalankara, et al., *Cancer Informatics*, 2015
+<footer class="source">
+Hansen, et al., *Nat. Genetics*, 2011<br>
+Corrada Bravo, et al., *BMC Bioinformatics*, 2012<br>
+Timp, et al., *Genome Medicine*, 2014<br>
+Dinalankara, et al., *Cancer Informatics*, 2015<br>
+</footer>
 
 ---
 
@@ -65,15 +71,17 @@ Genes with *consistent hyper-variable expression* across tumors are tissue-speci
 
 Measuring DNA methylation and understanding role in expression regulation in solid tumors
 <div class="centered">
-<img src="images/minfi.png" style="max-height: 60%; max-width: 60%"/>
+<img src="images/minfi.png" style="max-height: 55%; max-width: 55%"/>
 </div>
 
-Blocks can be detected using Illumina HumanMethylation450k bead arrays.
+Blocks can be detected using Illumina bead arrays.
 
-- Hansen, et al., *Nat. Genetics*, 2011
-- Corrada Bravo, et al., *BMC Bioinformatics*, 2012
-- **Timp, et al., *Genome Medicine*, 2014**
-- Dinalankara, et al., *Cancer Informatics*, 2015
+<footer class="source">
+Hansen, et al., *Nat. Genetics*, 2011<br>
+Corrada Bravo, et al., *BMC Bioinformatics*, 2012<br>
+Timp, et al., *Genome Medicine*, 2014<br>
+Dinalankara, et al., *Cancer Informatics*, 2015<br>
+</footer>
 
 ---
 
@@ -84,12 +92,14 @@ Measuring DNA methylation and understanding role in expression regulation in sol
 <img src="images/timp2.png" style="max-height: 40%; max-width: 40%"/>
 </div>
 
-Gene expression *hyper-variability* is enriched within *hypo-methylation* blocks
+*Hyper-variability* is enriched within *hypo-methylation* blocks
 
-- Hansen, et al., *Nat. Genetics*, 2011
-- Corrada Bravo, et al., *BMC Bioinformatics*, 2012
-- **Timp, et al., *Genome Medicine*, 2014**
-- Dinalankara, *Cancer Informatics*, 2015
+<footer class="source">
+Hansen, et al., *Nat. Genetics*, 2011<br>
+Corrada Bravo, et al., *BMC Bioinformatics*, 2012<br>
+Timp, et al., *Genome Medicine*, 2014<br>
+Dinalankara, et al., *Cancer Informatics*, 2015<br>
+</footer>
 
 ---
 
@@ -117,7 +127,7 @@ platform
 
 ## Analysis era 
 
-> - Funding agencies calling for proposals to (strictly) *analyze* project data
+> - Funding calls to (strictly) *analyze* project data
 >  - Epigenomics roadmap, Encode, TCGA, ...
 > - Journals calling for (strictly) *analysis* papers (e.g., Nature Methods)
 > - *We have unprecedented ability to measure*
@@ -127,8 +137,8 @@ platform
 
 ## Analysis era 
 
-- Funding agencies calling for proposals to (strictly) *analyze* project data
-- Epigenomics roadmap, Encode, TCGA, ...
+- Funding calls to (strictly) *analyze* project data
+  - Epigenomics roadmap, Encode, TCGA, ...
 - Journals calling for (strictly) *analysis* papers (e.g., Nature Methods)
 - *We have unprecedented ability to measure*
 - *and lots of publicly available data to contextualize it*
@@ -164,7 +174,7 @@ platform
 Plug-in data from R with `epivizr` package
 
 <div class="centered">
-<video width="70%" height="70%" controls>
+<video width="65%" height="65%" controls>
   <source src="movies/load_epivizr.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -177,7 +187,7 @@ Your browser does not support the video tag.
 Workspaces and filtering
 
 <div class="centered">
-<video width="70%" height="70%" controls>
+<video width="65%" height="65%" controls>
   <source src="movies/login_filter.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -190,7 +200,7 @@ Your browser does not support the video tag.
 Data transformations and customization
 
 <div class="centered">
-<video width="70%" height="70%" controls>
+<video width="65%" height="65%" controls>
   <source src="movies/transform_customize.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -203,7 +213,7 @@ Your browser does not support the video tag.
 Navigate and annotate
 
 <div class="centered">
-<video width="70%" height="70%" controls>
+<video width="65%" height="65%" controls>
   <source src="movies/navigate_annotate.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -216,7 +226,7 @@ Your browser does not support the video tag.
 Transformations and Aggregation
 
 <div class="centered">
-<video width="70%" height="70%" controls>
+<video width="65%" height="65%" controls>
   <source src="movies/transform_aggregate.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -229,7 +239,7 @@ Your browser does not support the video tag.
 Add new visualizations
 
 <div class="centered">
-<video width="70%" height="70%" controls>
+<video width="65%" height="65%" controls>
   <source src="movies/extend_customize.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -242,7 +252,7 @@ Your browser does not support the video tag.
 Statistically informed visual exploration
 
 <div class="centered">
-<video width="70%" height="70%" controls>
+<video width="65%" height="65%" controls>
   <source src="movies/guided_exploration.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -255,7 +265,7 @@ Your browser does not support the video tag.
 Reproduce, disseminate and collaborate
 
 <div class="centered">
-<video width="70%" height="70%" controls>
+<video width="65%" height="65%" controls>
   <source src="movies/share.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -363,6 +373,19 @@ One interpretation of *Big Data* is *Many relevant sources of contextual data*
 
 - Easily access/integrate *contextual* data
 - Driven by exploratory analysis of *immediate* data
+
+---
+
+## Analysis era
+
+<div class="centered">
+<img src="images/hadley.png" style="max-height: 50%; max-width: 50%"/>
+<img src="images/hadley2.png" style="max-height: 30%; max-width: 30%"/>
+<footer class="source">[H. Wickham]</footer>
+</div>
+
+One interpretation of *Big Data* is *Many relevant sources of contextual data*
+
 - Iterative process
 - Visual and computational exploration go hand in hand
 
@@ -408,7 +431,7 @@ We are building a software system to support creative exploratory analysis of ep
 Florin Chelaru, UMD
 
 - CBCB@UMD
-- JHU/Harvard: Kasper Hansen, Winston Timp, Rafael Irizarry, Andy Feinberg
+- JHU/Harvard: K. Hansen, W. Timp, R. Irizarry, A. Feinberg
 - Genentech: Michael Lawrence
 - Rstudio: Joe Cheng, et al.
 - Funding: NIH, Genentech
@@ -425,8 +448,6 @@ Nature Methods 2014
 Follow us: @epiviz  
 
 These slides available: http://hcorrada.github.io/bioit_world2015
-
----
 
 
 
