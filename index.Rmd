@@ -1,6 +1,6 @@
 ---
-title       :  Interactive and exploratory visualization of epigenome-wide data
-subtitle    : Molecular Medicine Tri-Conference, February 18, 2015
+title       : Interactive and exploratory visualization of epigenome-wide data
+subtitle    : Bio-IT World, April 23, 2015
 author      : Hector Corrada Bravo
 job         : Center for Bioinformatics and Computational Biology, University of Maryland
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -24,6 +24,7 @@ Large blocks of *hypo-methylation* (sometimes Mbps long) in colon cancer
 - **Hansen, et al., *Nat. Genetics*, 2011**
 - Corrada Bravo, et al., *BMC Bioinformatics*, 2012
 - Timp, et al., *Genome Medicine*, 2014
+- Dinalankara, et al., *Cancer Informatics*, 2015
 
 ---
 
@@ -39,6 +40,7 @@ Genes with *hyper-variable* expression in colon cancer are enriched within these
 - **Hansen, et al., *Nat. Genetics*, 2011**
 - Corrada Bravo, et al., *BMC Bioinformatics*, 2012
 - Timp, et al., *Genome Medicine*, 2014
+- Dinalankara, et al., *Cancer Informatics*, 2015
 
 ---
 
@@ -55,39 +57,10 @@ Genes with *consistent hyper-variable expression* across tumors are tissue-speci
 - Hansen, et al., *Nat. Genetics*, 2011
 - **Corrada Bravo, et al., *BMC Bioinformatics*, 2012**
 - Timp, et al., *Genome Medicine*, 2014
+- Dinalankara, et al., *Cancer Informatics*, 2015
 
 ---
 
-## Our motivation
-
-Measuring DNA methylation and understanding role in expression regulation in solid tumors
-<div class="centered">
-<img src="images/aucs.png" style="max-height: 30%; max-width: 30%"/>
-</div>
-
-Consistent hyper-variability can be used as stable signatures.
-
-- Hansen, et al., *Nat. Genetics*, 2011
-- **Corrada Bravo, et al., *BMC Bioinformatics*, 2012**
-- Timp, et al., *Genome Medicine*, 2014
-
----
-
-## Our motivation
-
-Measuring DNA methylation and understanding role in expression regulation in solid tumors
-<div class="centered">
-<img src="images/relapse.png" style="max-height: 8%; max-width: 8%"/>
-</div>
-
-Degree of expression deviation from normality in specific genes can be used as prognostic tool.
-
-- Hansen, et al., *Nat. Genetics*, 2011
-- Corrada Bravo, et al., *BMC Bioinformatics*, 2012
-- **Dinalankara and Corrada Bravo, *Cancer Informatics*, in press**
-- Timp, et al., *Genome Medicine*, 2014
-
----
 ## Our motivation
 
 Measuring DNA methylation and understanding role in expression regulation in solid tumors
@@ -100,6 +73,7 @@ Blocks can be detected using Illumina HumanMethylation450k bead arrays.
 - Hansen, et al., *Nat. Genetics*, 2011
 - Corrada Bravo, et al., *BMC Bioinformatics*, 2012
 - **Timp, et al., *Genome Medicine*, 2014**
+- Dinalankara, et al., *Cancer Informatics*, 2015
 
 ---
 
@@ -107,20 +81,7 @@ Blocks can be detected using Illumina HumanMethylation450k bead arrays.
 
 Measuring DNA methylation and understanding role in expression regulation in solid tumors
 <div class="centered">
-<img src="images/timp1.png" style="max-height: 70%; max-width: 70%"/>
-</div>
-
-Hypo-methylation blocks occur in all tumor types. Some universal, many cancer-specific
-
-- Hansen, et al., *Nat. Genetics*, 2011
-- Corrada Bravo, et al., *BMC Bioinformatics*, 2012
-- **Timp, et al., *Genome Medicine*, 2014**
-
-## Our motivation
-
-Measuring DNA methylation and understanding role in expression regulation in solid tumors
-<div class="centered">
-<img src="images/timp2.png" style="max-height: 70%; max-width: 70%"/>
+<img src="images/timp2.png" style="max-height: 40%; max-width: 40%"/>
 </div>
 
 Gene expression *hyper-variability* is enriched within *hypo-methylation* blocks
@@ -128,33 +89,7 @@ Gene expression *hyper-variability* is enriched within *hypo-methylation* blocks
 - Hansen, et al., *Nat. Genetics*, 2011
 - Corrada Bravo, et al., *BMC Bioinformatics*, 2012
 - **Timp, et al., *Genome Medicine*, 2014**
-
----
-
-## Our motivation
-
-Measuring DNA methylation and understanding role in expression regulation in solid tumors
-<div class="centered">
-<img src="images/timp3.png" style="max-height: 70%; max-width: 70%"/>
-</div>
-
-Degree of hypo-methylation increases through cancer progression in blocks.
-
-- Hansen, et al., *Nat. Genetics*, 2011
-- Corrada Bravo, et al., *BMC Bioinformatics*, 2012
-- **Timp, et al., *Genome Medicine*, 2014**
-
----
-
-## Summary
-
-- Large regions of hypo-methylation seems to be consistent in cancer
-  - occur in pre-cancerous lesions
-  - hypo-methylation increases with cancer progression
-- Gene expression hyper-variability enriched within these regions
-  - tissue-specific genes enriched within these regions
-  - can use degree of deviation from normality as stable diagnosis and prognosis mark in multiple cancer types
-
+- Dinalankara, *Cancer Informatics*, 2015
 
 ---
 
@@ -207,7 +142,7 @@ platform
 ---
 
 <div class="centered">
-<img src="images/epiviz_2_logo_medium.png" style="max-height: 40%; max-width: 40%"/>
+<img src="images/epiviz_logo_large_white.png" style="max-height: 40%; max-width: 40%"/>
 </div>
 
 ### Integrative, visual and computational exploratory analysis of genomic data
@@ -220,12 +155,111 @@ platform
 
 > **I want to use a genome browser track as a display device in R!!**
 
-e.g.: http://epiviz.cbcb.umd.edu/2?ws=45KBV4C7z3u
 <footer class="source">[Nat. Methods, 2014]</footer>
 
 ---
 
-<iframe data-src="http://epiviz.cbcb.umd.edu/2/?ws=W3ieGz19icm" width="99%"></iframe>
+## Walkthrough and Use Case
+
+Plug-in data from R with `epivizr` package
+
+<div class="centered">
+<video width="70%" height="70%" controls>
+  <source src="movies/load_epivizr.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+---
+
+## Walkthrough and Use Case
+
+Workspaces and filtering
+
+<div class="centered">
+<video width="70%" height="70%" controls>
+  <source src="movies/login_filter.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+---
+
+## Walkthrough and Use Case
+
+Data transformations and customization
+
+<div class="centered">
+<video width="70%" height="70%" controls>
+  <source src="movies/transform_customize.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+---
+
+## Walkthrough and Use Case
+
+Navigate and annotate
+
+<div class="centered">
+<video width="70%" height="70%" controls>
+  <source src="movies/navigate_annotate.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+---
+
+## Walkthrough and Use Case
+
+Transformations and Aggregation
+
+<div class="centered">
+<video width="70%" height="70%" controls>
+  <source src="movies/transform_aggregate.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+---
+
+## Walkthrough and Use Case
+
+Add new visualizations
+
+<div class="centered">
+<video width="70%" height="70%" controls>
+  <source src="movies/extend_customize.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+---
+
+## Walkthrough and Use Case
+
+Statistically informed visual exploration
+
+<div class="centered">
+<video width="70%" height="70%" controls>
+  <source src="movies/guided_exploration.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+---
+
+## Walkthrough and Use Case
+
+Reproduce, disseminate and collaborate
+
+<div class="centered">
+<video width="70%" height="70%" controls>
+  <source src="movies/share.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
 
 ---
 
@@ -282,23 +316,6 @@ see: https://gist.github.com/11017650
 
 ---
 
-http://epiviz.cbcb.umd.edu/?gist[]=11017650&ws=Y8kWxCO2Ajn
-<iframe data-src="http://epiviz.cbcb.umd.edu/2/?gist[]=11017650&ws=Y8kWxCO2Ajn"></iframe>
-
----
-## Plugins, plugins, plugins
-
-Example: import data from UCSC browser
-
-see: https://gist.github.com/c41a2df3671395d8e4ad
-
----
-
-http://epiviz.cbcb.umd.edu/?ws=cX1PgToUQs&seqName=chr11&start=59463945&end=60638081&gist[]=c41a2df3671395d8e4ad&settings=default&
-<iframe data-src="http://epiviz.cbcb.umd.edu/2/?ws=cX1PgToUQs&seqName=chr11&start=59463945&end=60638081&gist[]=c41a2df3671395d8e4ad&settings=default&"></iframe>
-
----
-
 ## Plugins, plugins, plugins
 
 <iframe data-src="http://epiviz.github.io"></iframe>
@@ -308,22 +325,16 @@ http://epiviz.cbcb.umd.edu/?ws=cX1PgToUQs&seqName=chr11&start=59463945&end=60638
 # Datatypes
 
 <div class="centered">
-<img src="images/datatypes.png" style="max-width=50%; min-width=50%"/>
+<img src="images/three_table_v3.png" style="max-width=50%; min-width=50%"/>
 </div>
 
-- Based on "three-table" design
-- Scripts can define coordinate space
-
----
-
-http://epiviz.cbcb.umd.edu/?ws=SRHZlWRRAPd&gist[]=a82a998817564ce3fe48&settings=default&
-<iframe data-src="http://epiviz.cbcb.umd.edu/2/?ws=SRHZlWRRAPd&gist[]=a82a998817564ce3fe48&settings=default&"></iframe>
+- Based on "three-table" design in Bioconductor infrastructure
 
 --- 
 
 ## Build your own browser 
 
-- Standalone version (no internet required, javascript code provided in `epivizr`)
+- Standalone version (javascript code bundled in `epivizr`)
 - Browse your favorite genome:
 
 ```r
@@ -333,6 +344,10 @@ library(Mus.musculus)
 mgr <- startStandalone(geneInfo=Mus.musculus, geneInfoName="mm10",
     				      keepSeqlevels=paste0("chr",c(1:19,"X","Y")))
 ```
+
+---
+
+<iframe data-src="http://epiviz.cbcb.umd.edu/?ws=WtbTU7OGMFu" width="99%"></iframe>
 
 ---
 
@@ -387,6 +402,19 @@ We are building a software system to support creative exploratory analysis of ep
 
 ---
 
+## Acknowledgements
+
+<img src="images/florin_chelaru.jpg"/>
+Florin Chelaru, UMD
+
+- CBCB@UMD
+- JHU/Harvard: Kasper Hansen, Winston Timp, Rafael Irizarry, Andy Feinberg
+- Genentech: Michael Lawrence
+- Rstudio: Joe Cheng, et al.
+- Funding: NIH, Genentech
+
+---
+
 ## Check it out:
 
 - http://epiviz.github.io
@@ -396,20 +424,10 @@ We are building a software system to support creative exploratory analysis of ep
 Nature Methods 2014    
 Follow us: @epiviz  
 
-These slides available: http://hcorrada.github.io/tricon2015
+These slides available: http://hcorrada.github.io/bioit_world2015
 
 ---
 
-## Acknowledgements
-
-<img src="http://www.cs.umd.edu/~florinc/img/florin_chelaru.jpg"/>
-Florin Chelaru, UMD
-
-- CBCB@UMD
-- JHU/Harvard: Kasper Hansen, Winston Timp, Rafael Irizarry, Andy Feinberg
-- Genentech: Michael Lawrence
-- Rstudio: Joe Cheng, et al.
-- Funding: NIH, Genentech
 
 
 
