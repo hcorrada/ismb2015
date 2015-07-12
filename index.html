@@ -4,7 +4,7 @@
   <title>Interactive and exploratory visualization of epigenome-wide data</title>
   <meta charset="utf-8">
   <meta name="description" content="Interactive and exploratory visualization of epigenome-wide data">
-  <meta name="author" content="Hector Corrada Bravo">
+  <meta name="author" content="Héctor Corrada Bravo (@hcorrada, hcorrada@umiacs.umd.edu)">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -35,8 +35,8 @@
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
     <h1>Interactive and exploratory visualization of epigenome-wide data</h1>
-    <h2>Bio-IT World, April 23, 2015</h2>
-    <p>Hector Corrada Bravo<br/>Center for Bioinformatics and Computational Biology, University of Maryland</p>
+    <h2>ISMB, July 2015</h2>
+    <p>Héctor Corrada Bravo (@hcorrada, hcorrada@umiacs.umd.edu)<br/>Center for Bioinformatics and Computational Biology, University of Maryland</p>
   </hgroup>
   <article></article>  
 </slide>
@@ -118,54 +118,6 @@ Dinalankara, et al., <em>Cancer Informatics</em>, 2015<br>
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Our motivation</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Measuring DNA methylation and understanding role in expression regulation in solid tumors</p>
-
-<div class="centered">
-<img src="images/minfi.png" style="max-height: 55%; max-width: 55%"/>
-</div>
-
-<p>Blocks can be detected using Illumina bead arrays.</p>
-
-<p><footer class="source">
-Hansen, et al., <em>Nat. Genetics</em>, 2011<br>
-Corrada Bravo, et al., <em>BMC Bioinformatics</em>, 2012<br>
-Timp, et al., <em>Genome Medicine</em>, 2014<br>
-Dinalankara, et al., <em>Cancer Informatics</em>, 2015<br>
-</footer></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-5" style="background:;">
-  <hgroup>
-    <h2>Our motivation</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Measuring DNA methylation and understanding role in expression regulation in solid tumors</p>
-
-<div class="centered">
-<img src="images/timp2.png" style="max-height: 40%; max-width: 40%"/>
-</div>
-
-<p><em>Hyper-variability</em> is enriched within <em>hypo-methylation</em> blocks</p>
-
-<p><footer class="source">
-Hansen, et al., <em>Nat. Genetics</em>, 2011<br>
-Corrada Bravo, et al., <em>BMC Bioinformatics</em>, 2012<br>
-Timp, et al., <em>Genome Medicine</em>, 2014<br>
-Dinalankara, et al., <em>Cancer Informatics</em>, 2015<br>
-</footer></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-6" style="background:;">
-  <hgroup>
     <h2>R/Bioconductor</h2>
   </hgroup>
   <article data-timings="">
@@ -177,14 +129,14 @@ Dinalankara, et al., <em>Cancer Informatics</em>, 2015<br>
 <li>State-of-the-art computational and statistical analysis
 platform</li>
 <li>We develop and apply methods for these analyses in this platform</li>
-<li>Our collaborators take part in analysis in this platform</li>
+<li>Our collaborators perform analysis in this platform</li>
 </ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-7" style="background:;">
+<slide class="" id="slide-5" style="background:;">
   <hgroup>
     <h2>What we wanted</h2>
   </hgroup>
@@ -200,38 +152,12 @@ platform</li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-8" style="background:;">
-  <hgroup>
-    <h2>Analysis era</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul class = "build incremental">
-<li>Funding calls to (strictly) <em>analyze</em> project data
-
-<ul>
-<li>Epigenomics roadmap, Encode, TCGA, ...</li>
-</ul></li>
-<li>Journals calling for (strictly) <em>analysis</em> papers (e.g., Nature Methods)</li>
-<li><em>We have unprecedented ability to measure</em></li>
-<li><em>and lots of publicly available data to contextualize it</em></li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-9" style="background:;">
+<slide class="" id="slide-6" style="background:;">
   <hgroup>
     <h2>Analysis era</h2>
   </hgroup>
   <article data-timings="">
     <ul>
-<li>Funding calls to (strictly) <em>analyze</em> project data
-
-<ul>
-<li>Epigenomics roadmap, Encode, TCGA, ...</li>
-</ul></li>
-<li>Journals calling for (strictly) <em>analysis</em> papers (e.g., Nature Methods)</li>
 <li><em>We have unprecedented ability to measure</em></li>
 <li><em>and lots of publicly available data to contextualize it</em></li>
 </ul>
@@ -246,7 +172,7 @@ platform</li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-10" style="background:;">
+<slide class="" id="slide-7" style="background:;">
   <article data-timings="">
     <div class="centered">
 <img src="images/epiviz_logo_large_white.png" style="max-height: 40%; max-width: 40%"/>
@@ -257,7 +183,7 @@ platform</li>
 <ul>
 <li>Browser-based</li>
 <li>Interactive</li>
-<li>Integration of data</li>
+<li>Data integration from multiple sources</li>
 <li>Reproducible dissemination</li>
 <li>Communication with R/Bioc: <code>epivizr</code> package</li>
 </ul>
@@ -272,15 +198,12 @@ platform</li>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-11" style="background:;">
-  <hgroup>
-    <h2>Walkthrough and Use Case</h2>
-  </hgroup>
+<slide class="" id="slide-8" style="background:;">
   <article data-timings="">
     <p>Plug-in data from R with <code>epivizr</code> package</p>
 
 <div class="centered">
-<video width="65%" height="65%" controls>
+<video width="80%" height="80%" controls>
   <source src="movies/load_epivizr.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -290,15 +213,12 @@ Your browser does not support the video tag.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-12" style="background:;">
-  <hgroup>
-    <h2>Walkthrough and Use Case</h2>
-  </hgroup>
+<slide class="" id="slide-9" style="background:;">
   <article data-timings="">
     <p>Workspaces and filtering</p>
 
 <div class="centered">
-<video width="65%" height="65%" controls>
+<video width="80%" height="80%" controls>
   <source src="movies/login_filter.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -308,16 +228,13 @@ Your browser does not support the video tag.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-13" style="background:;">
-  <hgroup>
-    <h2>Walkthrough and Use Case</h2>
-  </hgroup>
+<slide class="" id="slide-10" style="background:;">
   <article data-timings="">
     <p>Data transformations and customization</p>
 
 <div class="centered">
-<video width="65%" height="65%" controls>
-  <source src="movies/transform_customize.mp4" type="video/mp4">
+<video width="80%" height="80%" controls>
+  <source src="movies/transform_customize_v2.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 </div>
@@ -326,33 +243,12 @@ Your browser does not support the video tag.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-14" style="background:;">
-  <hgroup>
-    <h2>Walkthrough and Use Case</h2>
-  </hgroup>
+<slide class="" id="slide-11" style="background:;">
   <article data-timings="">
-    <p>Navigate and annotate</p>
+    <p>More transformations and aggregation</p>
 
 <div class="centered">
-<video width="65%" height="65%" controls>
-  <source src="movies/navigate_annotate.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-15" style="background:;">
-  <hgroup>
-    <h2>Walkthrough and Use Case</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Transformations and Aggregation</p>
-
-<div class="centered">
-<video width="65%" height="65%" controls>
+<video width="80%" height="80%" controls>
   <source src="movies/transform_aggregate.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -362,15 +258,12 @@ Your browser does not support the video tag.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-16" style="background:;">
-  <hgroup>
-    <h2>Walkthrough and Use Case</h2>
-  </hgroup>
+<slide class="" id="slide-12" style="background:;">
   <article data-timings="">
     <p>Add new visualizations</p>
 
 <div class="centered">
-<video width="65%" height="65%" controls>
+<video width="80%" height="80%" controls>
   <source src="movies/extend_customize.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -380,43 +273,7 @@ Your browser does not support the video tag.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-17" style="background:;">
-  <hgroup>
-    <h2>Walkthrough and Use Case</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Statistically informed visual exploration</p>
-
-<div class="centered">
-<video width="65%" height="65%" controls>
-  <source src="movies/guided_exploration.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-18" style="background:;">
-  <hgroup>
-    <h2>Walkthrough and Use Case</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Reproduce, disseminate and collaborate</p>
-
-<div class="centered">
-<video width="65%" height="65%" controls>
-  <source src="movies/share.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-19" style="background:;">
+<slide class="" id="slide-13" style="background:;">
   <hgroup>
     <h2>Communication with R/Bioc</h2>
   </hgroup>
@@ -431,38 +288,31 @@ Your browser does not support the video tag.
 </code></pre>
 
 <ul>
-<li>Add a device with <code>GRanges</code> data</li>
+<li>Calculate a statistic of interest</li>
 </ul>
 
-<pre><code class="r">blocks_dev &lt;- mgr$addDevice(colon_blocks, &quot;450k blocks&quot;)
+<pre><code class="r"># Get tumor methylation base-pair data
+m &lt;- assay(se)[,&quot;tumor&quot;]
+
+# Compute regions with highest variability across cpgs
+region_stat &lt;- calcWindowStat(m, step=25, window=80, stat=rowSds)
+s &lt;- region_stat[,&quot;stat&quot;]
 </code></pre>
 
-<ul>
-<li>Subset ranges by width</li>
-</ul>
+<hr>
 
-<pre><code class="r">keep &lt;- width(colon_blocks) &gt; 250000
-mgr$updateDevice(blocks_dev, colon_blocks[keep,])
-</code></pre>
+<h2>Communication with R/Bioc</h2>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-20" style="background:;">
-  <hgroup>
-    <h2>Communication with R/Bioc</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Using the <code>epivizr</code> package: browse by regions of interest.</p>
+<p>Using the <code>epivizr</code> package: browse by regions of interest.</p>
 
 <ul>
-<li>What&#39;s around the widest blocks?</li>
+<li>What&#39;s around the regions with highest across CpG variability</li>
 </ul>
 
-<pre><code class="r">o &lt;- order(-width(colon_blocks))
-slideShowRegions &lt;- colon_blocks[o[1:5],]
-slideShowRegions &lt;- slideShowRegions + 1e5
+<pre><code class="r"># get locations in decreasing order
+o &lt;- order(s, decreasing=TRUE)
+indices &lt;- region_stat[o, &quot;indices&quot;]
+slideShowRegions &lt;- rowRanges(se)[indices] + 1250000L
 mgr$slideshow(slideShowRegions)
 </code></pre>
 
@@ -475,56 +325,28 @@ thanks to the @rstudio folks for working on this infrastructure.</p>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-21" style="background:;">
-  <hgroup>
-    <h2>Plugins, plugins, plugins</h2>
-  </hgroup>
+<slide class="" id="slide-14" style="background:;">
   <article data-timings="">
-    <p>Our architecture is <em>dynamically extensible</em>. We can easily integrate new data types and add new visualizations.</p>
+    <p>Statistically informed visual exploration</p>
 
-<p>Example: adding a new visualization</p>
-
-<p>see: <a href="https://gist.github.com/11017650">https://gist.github.com/11017650</a></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-22" style="background:;">
-  <hgroup>
-    <h2>Plugins, plugins, plugins</h2>
-  </hgroup>
-  <article data-timings="">
-    <iframe data-src="http://epiviz.github.io"></iframe>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-23" style="background:;">
-  <hgroup>
-    <h1>Datatypes</h1>
-  </hgroup>
-  <article data-timings="">
-    <div class="centered">
-<img src="images/three_table_v3.png" style="max-width=50%; min-width=50%"/>
+<div class="centered">
+<video width="80%" height="80%" controls>
+  <source src="movies/guided_exploration_v2.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 </div>
 
-<ul>
-<li>Based on &quot;three-table&quot; design in Bioconductor infrastructure</li>
-</ul>
-
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-24" style="background:;">
+<slide class="" id="slide-15" style="background:;">
   <hgroup>
     <h2>Build your own browser</h2>
   </hgroup>
   <article data-timings="">
     <ul>
-<li>Standalone version (javascript code bundled in <code>epivizr</code>)</li>
+<li>Standalone version (JS code bundled in <code>epivizr</code> BioC package)</li>
 <li>Browse your favorite genome:</li>
 </ul>
 
@@ -539,9 +361,143 @@ mgr &lt;- startStandalone(geneInfo=Mus.musculus, geneInfoName=&quot;mm10&quot;,
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-25" style="background:;">
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Extensible framework</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe data-src="http://epiviz.github.io"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
   <article data-timings="">
     <iframe data-src="http://epiviz.cbcb.umd.edu/?ws=WtbTU7OGMFu" width="99%"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>What are we working on?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>EpivizWidgets: using epiviz visualizations within, e.g., Rmarkdown</li>
+<li>VisualCollaboration: collaborative annotation of workspaces, datasets, visualizations, etc.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>Beyond genomics and epigenomics: metagenomics</h2>
+  </hgroup>
+  <article data-timings="">
+    <div class="centered">
+<img src="images/hmp.png" style="max-width=50%; min-width=50%"/>
+</div>
+
+<p><footer class="source">[Human Microbiome Project]</footer></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>Beyond genomics and epigenomics: metagenomics</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><strong>Coordinates</strong>:</p>
+
+<div class="centered">
+<img src="images/tree.png" style="max-width: 90%; max-height: 90%"/>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Beyond genomics and epigenomics: metagenomics</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><strong>Samples</strong>:</p>
+
+<div class="centered">
+<img src="images/meta_heatmap.jpg" style="max-width: 90%; max-height: 90%"/>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>Beyond genomics and epigenomics: metagenomics</h2>
+  </hgroup>
+  <article data-timings="">
+    <div class="centered">
+<img src="images/data_sources_with_hierarchy.png" style="max-height: 45%; max-width: 45%"/>
+</div>
+
+<p>Hierachically organized features</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>Beyond epigenomics: metagenomics</h2>
+  </hgroup>
+  <article data-timings="">
+    <div class="centered">
+<video width="75%" height="75%" controls>
+  <source src="movies/metavizr1.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-24" style="background:;">
+  <hgroup>
+    <h2>Beyond epigenomics: metagenomics</h2>
+  </hgroup>
+  <article data-timings="">
+    <div class="centered">
+<video width="75%" height="75%" controls>
+  <source src="movies/metavizr2.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>Beyond epigenomics: metagenomics</h2>
+  </hgroup>
+  <article data-timings="">
+    <div class="centered">
+<img src="images/pca_v03.png" style="max-width: 65%; max-height: 65%"/>
+</div>
+
+<p>Built with <code>epivizr</code> and <code>metagenomeSeq</code></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -608,53 +564,6 @@ mgr &lt;- startStandalone(geneInfo=Mus.musculus, geneInfoName=&quot;mm10&quot;,
 
 <slide class="" id="slide-29" style="background:;">
   <hgroup>
-    <h2>Visualization goals</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
-<li>Context 
-
-<ul>
-<li>Integrate and align multiple data sources; navigate; search</li>
-<li><em>Connect</em>: brushing</li>
-<li><em>Encode</em>: map visualization properties to data on the fly</li>
-<li><em>Reconfigure</em>: multiple views of the same data</li>
-</ul></li>
-</ul>
-
-<p><footer class="source">[Perer &amp; Shneiderman]</footer></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-30" style="background:;">
-  <hgroup>
-    <h2>Visualization goals</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
-<li>Data
-
-<ul>
-<li><em>Select and filter</em>: tight-knit integration with R/Bioconductor; </li>
-<li>(future) filters on visualization propagate to data environment</li>
-</ul></li>
-<li>Model
-
-<ul>
-<li>New &#39;measurements&#39; the result of modeling; perhaps suggested by data context</li>
-</ul></li>
-</ul>
-
-<p><footer class="source">[Perer &amp; Shneiderman]</footer></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-31" style="background:;">
-  <hgroup>
     <h2>Acknowledgements</h2>
   </hgroup>
   <article data-timings="">
@@ -673,21 +582,23 @@ Florin Chelaru, UMD</p>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-32" style="background:;">
+<slide class="" id="slide-30" style="background:;">
   <hgroup>
     <h2>Check it out:</h2>
   </hgroup>
   <article data-timings="">
     <ul>
-<li><a href="http://epiviz.github.io">http://epiviz.github.io</a></li>
-<li><a href="http://epiviz.cbcb.umd.edu">http://epiviz.cbcb.umd.edu</a></li>
-<li><a href="http://github.com/epiviz">http://github.com/epiviz</a></li>
+<li>Homepage: <a href="http://epiviz.github.io">http://epiviz.github.io</a></li>
+<li>Webapp: <a href="http://epiviz.cbcb.umd.edu">http://epiviz.cbcb.umd.edu</a></li>
+<li>Code: <a href="http://github.com/epiviz">http://github.com/epiviz</a></li>
 </ul>
 
 <p>Nature Methods 2014<br>
-Follow us: @epiviz  </p>
+Follow us: <code>@epiviz</code></p>
 
-<p>These slides available: <a href="http://hcorrada.github.io/bioit_world2015">http://hcorrada.github.io/bioit_world2015</a></p>
+<p>These slides available: <a href="http://hcorrada.github.io/ismb2015">http://hcorrada.github.io/ismb2015</a><br>
+Me: <code>@hcorrada</code>, <code>hcorrada@umiacs.umd.edu</code><br>
+<a href="http://www.cbcb.umd.edu/%7Ehcorrada"><code>www.cbcb.umd.edu/~hcorrada</code></a></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -717,133 +628,133 @@ Follow us: @epiviz  </p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Our motivation'>
+        data-slide=4 title='R/Bioconductor'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Our motivation'>
+        data-slide=5 title='What we wanted'>
          5
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='R/Bioconductor'>
+        data-slide=6 title='Analysis era'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='What we wanted'>
+        data-slide=7 title='NA'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Analysis era'>
+        data-slide=8 title='NA'>
          8
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=9 title='Analysis era'>
+        data-slide=9 title='NA'>
          9
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title=''>
+        data-slide=10 title='NA'>
          10
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='Walkthrough and Use Case'>
+        data-slide=11 title='NA'>
          11
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='Walkthrough and Use Case'>
+        data-slide=12 title='NA'>
          12
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='Walkthrough and Use Case'>
+        data-slide=13 title='Communication with R/Bioc'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='Walkthrough and Use Case'>
+        data-slide=14 title='NA'>
          14
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='Walkthrough and Use Case'>
+        data-slide=15 title='Build your own browser'>
          15
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=16 title='Walkthrough and Use Case'>
+        data-slide=16 title='Extensible framework'>
          16
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='Walkthrough and Use Case'>
+        data-slide=17 title='NA'>
          17
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title='Walkthrough and Use Case'>
+        data-slide=18 title='What are we working on?'>
          18
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='Communication with R/Bioc'>
+        data-slide=19 title='Beyond genomics and epigenomics: metagenomics'>
          19
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='Communication with R/Bioc'>
+        data-slide=20 title='Beyond genomics and epigenomics: metagenomics'>
          20
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='Plugins, plugins, plugins'>
+        data-slide=21 title='Beyond genomics and epigenomics: metagenomics'>
          21
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title='Plugins, plugins, plugins'>
+        data-slide=22 title='Beyond genomics and epigenomics: metagenomics'>
          22
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=23 title='Datatypes'>
+        data-slide=23 title='Beyond epigenomics: metagenomics'>
          23
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=24 title='Build your own browser'>
+        data-slide=24 title='Beyond epigenomics: metagenomics'>
          24
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=25 title=''>
+        data-slide=25 title='Beyond epigenomics: metagenomics'>
          25
       </a>
     </li>
@@ -867,26 +778,14 @@ Follow us: @epiviz  </p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=29 title='Visualization goals'>
+        data-slide=29 title='Acknowledgements'>
          29
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=30 title='Visualization goals'>
+        data-slide=30 title='Check it out:'>
          30
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=31 title='Acknowledgements'>
-         31
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=32 title='Check it out:'>
-         32
       </a>
     </li>
   </ul>

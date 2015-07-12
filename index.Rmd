@@ -1,7 +1,7 @@
 ---
 title       : Interactive and exploratory visualization of epigenome-wide data
-subtitle    : Bio-IT World, April 23, 2015
-author      : Hector Corrada Bravo
+subtitle    : ISMB, July 2015
+author      : Héctor Corrada Bravo (@hcorrada, hcorrada@umiacs.umd.edu)
 job         : Center for Bioinformatics and Computational Biology, University of Maryland
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
@@ -67,42 +67,6 @@ Dinalankara, et al., *Cancer Informatics*, 2015<br>
 
 ---
 
-## Our motivation
-
-Measuring DNA methylation and understanding role in expression regulation in solid tumors
-<div class="centered">
-<img src="images/minfi.png" style="max-height: 55%; max-width: 55%"/>
-</div>
-
-Blocks can be detected using Illumina bead arrays.
-
-<footer class="source">
-Hansen, et al., *Nat. Genetics*, 2011<br>
-Corrada Bravo, et al., *BMC Bioinformatics*, 2012<br>
-Timp, et al., *Genome Medicine*, 2014<br>
-Dinalankara, et al., *Cancer Informatics*, 2015<br>
-</footer>
-
----
-
-## Our motivation
-
-Measuring DNA methylation and understanding role in expression regulation in solid tumors
-<div class="centered">
-<img src="images/timp2.png" style="max-height: 40%; max-width: 40%"/>
-</div>
-
-*Hyper-variability* is enriched within *hypo-methylation* blocks
-
-<footer class="source">
-Hansen, et al., *Nat. Genetics*, 2011<br>
-Corrada Bravo, et al., *BMC Bioinformatics*, 2012<br>
-Timp, et al., *Genome Medicine*, 2014<br>
-Dinalankara, et al., *Cancer Informatics*, 2015<br>
-</footer>
-
----
-
 ## R/Bioconductor
 
 <div class="centered">
@@ -112,7 +76,7 @@ Dinalankara, et al., *Cancer Informatics*, 2015<br>
 - State-of-the-art computational and statistical analysis
 platform
 - We develop and apply methods for these analyses in this platform
-- Our collaborators take part in analysis in this platform
+- Our collaborators perform analysis in this platform
 
 ---
 
@@ -127,19 +91,6 @@ platform
 
 ## Analysis era 
 
-> - Funding calls to (strictly) *analyze* project data
->  - Epigenomics roadmap, Encode, TCGA, ...
-> - Journals calling for (strictly) *analysis* papers (e.g., Nature Methods)
-> - *We have unprecedented ability to measure*
-> - *and lots of publicly available data to contextualize it*
-
---- 
-
-## Analysis era 
-
-- Funding calls to (strictly) *analyze* project data
-  - Epigenomics roadmap, Encode, TCGA, ...
-- Journals calling for (strictly) *analysis* papers (e.g., Nature Methods)
 - *We have unprecedented ability to measure*
 - *and lots of publicly available data to contextualize it*
 
@@ -159,7 +110,7 @@ platform
 
 - Browser-based
 - Interactive
-- Integration of data
+- Data integration from multiple sources
 - Reproducible dissemination
 - Communication with R/Bioc: `epivizr` package
 
@@ -169,12 +120,12 @@ platform
 
 ---
 
-## Walkthrough and Use Case
+## 
 
 Plug-in data from R with `epivizr` package
 
 <div class="centered">
-<video width="65%" height="65%" controls>
+<video width="80%" height="80%" controls>
   <source src="movies/load_epivizr.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -182,12 +133,12 @@ Your browser does not support the video tag.
 
 ---
 
-## Walkthrough and Use Case
+## 
 
 Workspaces and filtering
 
 <div class="centered">
-<video width="65%" height="65%" controls>
+<video width="80%" height="80%" controls>
   <source src="movies/login_filter.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -195,38 +146,25 @@ Your browser does not support the video tag.
 
 ---
 
-## Walkthrough and Use Case
+## 
 
 Data transformations and customization
 
 <div class="centered">
-<video width="65%" height="65%" controls>
-  <source src="movies/transform_customize.mp4" type="video/mp4">
+<video width="80%" height="80%" controls>
+  <source src="movies/transform_customize_v2.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 </div>
 
 ---
 
-## Walkthrough and Use Case
+## 
 
-Navigate and annotate
-
-<div class="centered">
-<video width="65%" height="65%" controls>
-  <source src="movies/navigate_annotate.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>
-
----
-
-## Walkthrough and Use Case
-
-Transformations and Aggregation
+More transformations and aggregation
 
 <div class="centered">
-<video width="65%" height="65%" controls>
+<video width="80%" height="80%" controls>
   <source src="movies/transform_aggregate.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -234,39 +172,13 @@ Your browser does not support the video tag.
 
 ---
 
-## Walkthrough and Use Case
+## 
 
 Add new visualizations
 
 <div class="centered">
-<video width="65%" height="65%" controls>
+<video width="80%" height="80%" controls>
   <source src="movies/extend_customize.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>
-
----
-
-## Walkthrough and Use Case
-
-Statistically informed visual exploration
-
-<div class="centered">
-<video width="65%" height="65%" controls>
-  <source src="movies/guided_exploration.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-</div>
-
----
-
-## Walkthrough and Use Case
-
-Reproduce, disseminate and collaborate
-
-<div class="centered">
-<video width="65%" height="65%" controls>
-  <source src="movies/share.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 </div>
@@ -283,31 +195,29 @@ Using the `epivizr` package
 mgr <- startEpiviz(workspace="qyOTB6vVnff")
 ```
 
-- Add a device with `GRanges` data
+- Calculate a statistic of interest
 
 ```r
-blocks_dev <- mgr$addDevice(colon_blocks, "450k blocks")
+# Get tumor methylation base-pair data
+m <- assay(se)[,"tumor"]
+
+# Compute regions with highest variability across cpgs
+region_stat <- calcWindowStat(m, step=25, window=80, stat=rowSds)
+s <- region_stat[,"stat"]
 ```
-
-- Subset ranges by width
-
-```r
-keep <- width(colon_blocks) > 250000
-mgr$updateDevice(blocks_dev, colon_blocks[keep,])
-```
-
 --- 
 
 ## Communication with R/Bioc
 
 Using the `epivizr` package: browse by regions of interest.
 
-- What's around the widest blocks?
+- What's around the regions with highest across CpG variability
 
 ```r
-o <- order(-width(colon_blocks))
-slideShowRegions <- colon_blocks[o[1:5],]
-slideShowRegions <- slideShowRegions + 1e5
+# get locations in decreasing order
+o <- order(s, decreasing=TRUE)
+indices <- region_stat[o, "indices"]
+slideShowRegions <- rowRanges(se)[indices] + 1250000L
 mgr$slideshow(slideShowRegions)
 ```
 
@@ -316,35 +226,22 @@ mgr$slideshow(slideShowRegions)
 
 ---
 
-## Plugins, plugins, plugins
+## 
 
-Our architecture is *dynamically extensible*. We can easily integrate new data types and add new visualizations.
-
-Example: adding a new visualization
-
-see: https://gist.github.com/11017650
-
----
-
-## Plugins, plugins, plugins
-
-<iframe data-src="http://epiviz.github.io"></iframe>
-
----
-
-# Datatypes
+Statistically informed visual exploration
 
 <div class="centered">
-<img src="images/three_table_v3.png" style="max-width=50%; min-width=50%"/>
+<video width="80%" height="80%" controls>
+  <source src="movies/guided_exploration_v2.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 </div>
 
-- Based on "three-table" design in Bioconductor infrastructure
-
---- 
+---
 
 ## Build your own browser 
 
-- Standalone version (javascript code bundled in `epivizr`)
+- Standalone version (JS code bundled in `epivizr` BioC package)
 - Browse your favorite genome:
 
 ```r
@@ -357,7 +254,93 @@ mgr <- startStandalone(geneInfo=Mus.musculus, geneInfoName="mm10",
 
 ---
 
+## Extensible framework
+
+<iframe data-src="http://epiviz.github.io"></iframe>
+
+---
+
 <iframe data-src="http://epiviz.cbcb.umd.edu/?ws=WtbTU7OGMFu" width="99%"></iframe>
+
+---
+
+## What are we working on?
+
+> - EpivizWidgets: using epiviz visualizations within, e.g., Rmarkdown
+> - VisualCollaboration: collaborative annotation of workspaces, datasets, visualizations, etc.
+
+---
+
+## Beyond genomics and epigenomics: metagenomics
+
+<div class="centered">
+<img src="images/hmp.png" style="max-width=50%; min-width=50%"/>
+</div>
+
+<footer class="source">[Human Microbiome Project]</footer>
+
+---
+
+## Beyond genomics and epigenomics: metagenomics
+
+**Coordinates**:
+
+<div class="centered">
+<img src="images/tree.png" style="max-width: 90%; max-height: 90%"/>
+</div>
+
+---
+
+## Beyond genomics and epigenomics: metagenomics
+
+**Samples**:
+<div class="centered">
+<img src="images/meta_heatmap.jpg" style="max-width: 90%; max-height: 90%"/>
+</div>
+
+---
+
+## Beyond genomics and epigenomics: metagenomics
+
+<div class="centered">
+<img src="images/data_sources_with_hierarchy.png" style="max-height: 45%; max-width: 45%"/>
+</div>
+
+Hierachically organized features
+
+---
+
+## Beyond epigenomics: metagenomics
+
+<div class="centered">
+<video width="75%" height="75%" controls>
+  <source src="movies/metavizr1.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+</div>
+
+---
+
+## Beyond epigenomics: metagenomics
+
+<div class="centered">
+<video width="75%" height="75%" controls>
+  <source src="movies/metavizr2.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+</div>
+
+---
+
+## Beyond epigenomics: metagenomics
+
+<div class="centered">
+<img src="images/pca_v03.png" style="max-width: 65%; max-height: 65%"/>
+</div>
+
+Built with `epivizr` and `metagenomeSeq`
 
 ---
 
@@ -401,30 +384,6 @@ We are building a software system to support creative exploratory analysis of ep
 
 ---
 
-## Visualization goals
-
-- Context 
-  - Integrate and align multiple data sources; navigate; search
-  - *Connect*: brushing
-  - *Encode*: map visualization properties to data on the fly
-  - *Reconfigure*: multiple views of the same data
-
-<footer class="source">[Perer & Shneiderman]</footer>
-
----
-
-## Visualization goals
-
-- Data
-  - *Select and filter*: tight-knit integration with R/Bioconductor; 
-  - (future) filters on visualization propagate to data environment
-- Model
-    - New 'measurements' the result of modeling; perhaps suggested by data context
-
-<footer class="source">[Perer & Shneiderman]</footer>
-
----
-
 ## Acknowledgements
 
 <img src="images/florin_chelaru.jpg"/>
@@ -440,14 +399,16 @@ Florin Chelaru, UMD
 
 ## Check it out:
 
-- http://epiviz.github.io
-- http://epiviz.cbcb.umd.edu
-- http://github.com/epiviz
+- Homepage: http://epiviz.github.io
+- Webapp: http://epiviz.cbcb.umd.edu
+- Code: http://github.com/epiviz
 
 Nature Methods 2014    
-Follow us: @epiviz  
+Follow us: `@epiviz`
 
-These slides available: http://hcorrada.github.io/bioit_world2015
+These slides available: http://hcorrada.github.io/ismb2015  
+Me: `@hcorrada`, `hcorrada@umiacs.umd.edu`  
+[`www.cbcb.umd.edu/~hcorrada`](http://www.cbcb.umd.edu/~hcorrada)
 
 
 
