@@ -205,6 +205,7 @@ m <- assay(se)[,"tumor"]
 region_stat <- calcWindowStat(m, step=25, window=80, stat=rowSds)
 s <- region_stat[,"stat"]
 ```
+
 --- 
 
 ## Communication with R/Bioc
